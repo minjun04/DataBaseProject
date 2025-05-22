@@ -5,4 +5,5 @@ public class Student {
     //상준
     //현민
     //인근
+    //명락
 }
