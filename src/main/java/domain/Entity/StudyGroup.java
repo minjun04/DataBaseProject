@@ -37,7 +37,6 @@ public class StudyGroup {
     @ManyToMany
     @JoinColumn(name = "leaderId", referencedColumnName = "studentId",
             foreignKey = @ForeignKey(name = "fk_studygroup_student", foreignKeyDefinition = "FOREIGN KEY (leaderId) REFERENCES student(studentId) ON DELETE CASCADE"))
-    private Student student;
-
-
+    private Student leader;
+    
 }
