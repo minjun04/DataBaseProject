@@ -1,10 +1,30 @@
 package domain.Entity;
 
+import jakarta.persistence.*;
+import lombok.*;
+
+@Getter
+@Setter
+@Entity
+@Table(name="Student")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
-    //서준
-    //상준
-    //현민
-    //인근
-    //상준2
-    //박현민바보
+    @Id
+    @Column(name = "studentId", nullable = false)
+    private String studentId;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private String major;
+
+    private int grade;
+
+    @Column(nullable = false)
+    private String phone;
 }
+
+
+
