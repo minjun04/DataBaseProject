@@ -1,18 +1,17 @@
 package domain.Entity.Project;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProjectId implements Serializable {
     private String name;
     private String leaderId;
 
-    public ProjectId() {}
-
-    public ProjectId(String name, String leaderId) {
-        this.name = name;
-        this.leaderId = leaderId;
-    }
 
     @Override
     public boolean equals(Object o) {
