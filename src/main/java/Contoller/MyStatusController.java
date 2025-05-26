@@ -10,6 +10,6 @@ public class MyStatusController {
 
     @GetMapping("/status")
     public void getMyStatus(){
-
+        //민준
     }
 }
