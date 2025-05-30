@@ -1,4 +1,4 @@
-package Contoller;
+package api.Contoller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,6 @@ public class MyStatusController {
 
     @GetMapping("/status")
     public void getMyStatus(){
-        //민준
+
     }
 }

@@ -25,6 +25,8 @@ public class Student {
     @Column(nullable = false)
     private String phone;
 
+    private String password;
+
 }
 
 
