@@ -1,11 +1,8 @@
 package DataBaseProject.demo.controller.api;
 
 import DataBaseProject.demo.controller.api.dto.myProjectResponse;
-import DataBaseProject.demo.controller.api.dto.myStatusResponse;
+import DataBaseProject.demo.controller.api.dto.StudentStatusResponse;
 import DataBaseProject.demo.controller.api.dto.myStudyGroupResponse;
-import DataBaseProject.demo.domain.Entity.Student;
-import DataBaseProject.demo.domain.Entity.StudyGroup;
-import DataBaseProject.demo.domain.Entity.project.Project;
 import DataBaseProject.demo.domain.service.MyCheckService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,14 +14,14 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/inquiry")
+@RequestMapping("/api/myStatus")
 public class MyStatusCheckController {
 
     private final MyCheckService myCheckService;
 
     @GetMapping("/info")
     public ResponseEntity<?> myStatusCheck(String studentId){
-        myStatusResponse response = myCheckService.myStatus(studentId);
+        StudentStatusResponse response = myCheckService.myStatus(studentId);
 
         return ResponseEntity.ok(response);
 

@@ -1,7 +1,7 @@
 package DataBaseProject.demo.domain.service;
 
 import DataBaseProject.demo.controller.api.dto.myProjectResponse;
-import DataBaseProject.demo.controller.api.dto.myStatusResponse;
+import DataBaseProject.demo.controller.api.dto.StudentStatusResponse;
 import DataBaseProject.demo.controller.api.dto.myStudyGroupResponse;
 import DataBaseProject.demo.domain.Entity.project.Project;
 import DataBaseProject.demo.domain.Entity.Student;
@@ -14,8 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 
 @Service
 @AllArgsConstructor
@@ -25,11 +23,11 @@ public class MyCheckService {
     private final StudyGroupRepository studyGroupRepository;
     private final ProjectRepository projectRepository;
 
-    public myStatusResponse myStatus(String studentId) {
+    public StudentStatusResponse myStatus(String studentId) {
 
         Student student = studentRepository.findByStudentId(studentId);
 
-        return new myStatusResponse(
+        return new StudentStatusResponse(
                 student.getStudentId(),
                 student.getName(),
                 student.getMajor(),
@@ -39,7 +37,7 @@ public class MyCheckService {
     }
 
     public List<myStudyGroupResponse> myStudyGruop(String studentId){
-        List<StudyGroup> mystudyGroup = studyGroupRepository.findByStudentId(studentId);
+        List<StudyGroup> mystudyGroup = studyGroupRepository.findByStudentsStudentId(studentId);
 
         return mystudyGroup.stream()
                 .map(group -> new myStudyGroupResponse(
@@ -54,7 +52,7 @@ public class MyCheckService {
     }
 
     public myProjectResponse myProject(String studentId, String projectName){
-        Project myProject = projectRepository.findByleaderIdAndName(studentId, projectName);
+        Project myProject = projectRepository.findByLeaderIdAndName(studentId, projectName);
 
         if(myProject==null){
             return null;

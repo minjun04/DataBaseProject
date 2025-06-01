@@ -3,6 +3,8 @@ package DataBaseProject.demo.domain.repository;
 import DataBaseProject.demo.domain.Entity.project.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+
 public interface ProjectRepository extends JpaRepository<Project, String> {
-    Project findByleaderIdAndName(String leaderId, String name);
+    Project findByLeaderIdAndName(String leaderId, String name);
+
 }

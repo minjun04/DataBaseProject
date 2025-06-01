@@ -1,9 +1,11 @@
 package DataBaseProject.demo.domain.Entity.project;
 
+import DataBaseProject.demo.domain.Entity.Student;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Getter
@@ -24,18 +26,8 @@ public class Project {
     private String topic;
 
     private int personnel; //수용가능한 인원 수
-    /*
-    @ManyToOne
-    @JoinColumn(
-            name = "leaderId",
-            referencedColumnName = "studentId",
-            insertable = false,
-            updatable = false,
-            foreignKey = @ForeignKey(
-                    name = "fk_project_student",
-                    foreignKeyDefinition = "FOREIGN KEY (leaderId) REFERENCES student(studentId) ON DELETE CASCADE"
-            )
-    )
-    private Student leader;
-    */
+
+    @OneToMany(mappedBy = "project")
+    private List<Student> students;
+
 }
