@@ -1,9 +1,9 @@
-package domain.service;
+package DataBaseProject.demo.domain.service;
 
-import api.Contoller.api.AuthLoginResponse;
-import domain.Entity.Student;
-import domain.repository.StudentRepository;
+import DataBaseProject.demo.domain.Entity.Student;
+import DataBaseProject.demo.domain.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -22,15 +22,13 @@ public class AuthService {
         }
     }
 
-    public Student Login(String studentId) throws IllegalAccessException {
+    public boolean login(String studentId)  {
         Student student = studentRepository.findByStudentId(studentId);
-
         if(student == null){
-            throw new IllegalAccessException("존재하지 않는 아이디 입니다.");
+            return false;
         }
 
-        return student;
-
+        return true;
     }
 
 }

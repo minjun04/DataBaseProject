@@ -1,8 +1,9 @@
-package domain.Entity;
+package DataBaseProject.demo.domain.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Getter
@@ -26,17 +27,29 @@ public class StudyGroup {
 
     private String topic;
 
-    @Column(name="leaderId", nullable = false)
+   @Column(name="leaderId", nullable = false)
     private String leaderId;
 
     private int maxMember;
 
     private LocalDate createDate;
 
-
-    @ManyToMany
+    /*
+    // 그룹장 (리더) : ManyToOne
+    @ManyToOne
     @JoinColumn(name = "leaderId", referencedColumnName = "studentId",
-            foreignKey = @ForeignKey(name = "fk_studygroup_student", foreignKeyDefinition = "FOREIGN KEY (leaderId) REFERENCES student(studentId) ON DELETE CASCADE"))
+            foreignKey = @ForeignKey(name = "fk_studygroup_student_leader"))
     private Student leader;
-    
+
+    // 스터디원 (멤버) : ManyToMany
+    @ManyToMany
+    @JoinTable(
+            name = "StudyGroup_Member",
+            joinColumns = @JoinColumn(name = "groupId"),
+            inverseJoinColumns = @JoinColumn(name = "studentId"),
+            foreignKey = @ForeignKey(name = "fk_studygroup_student_member")
+
+    )
+    private List<Student> members;
+    */
 }

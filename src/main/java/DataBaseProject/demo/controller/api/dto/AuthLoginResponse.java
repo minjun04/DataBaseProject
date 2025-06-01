@@ -1,6 +1,6 @@
-package api.Contoller.api;
+package DataBaseProject.demo.controller.api.dto;
 
-import domain.Entity.Student;
+import DataBaseProject.demo.domain.Entity.Student;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

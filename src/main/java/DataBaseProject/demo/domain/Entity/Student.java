@@ -1,4 +1,4 @@
-package domain.Entity;
+package DataBaseProject.demo.domain.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;

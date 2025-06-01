@@ -1,7 +1,5 @@
-package domain.Entity.StudyRoom;
+package DataBaseProject.demo.domain.Entity.studyRoom;
 
-import domain.Entity.Student;
-import domain.Entity.StudyGroup;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,9 +25,11 @@ public class StudyRoom {
 
     private String status;
 
-
+    /*
     @ManyToOne
     @JoinColumn(name = "groupId", referencedColumnName = "groupId",
             foreignKey = @ForeignKey(name = "fk_studyRoom_studyGroup", foreignKeyDefinition = "FOREIGN KEY (groupId) REFERENCES studyGroup(groupId) ON DELETE CASCADE"))
     private StudyGroup group;
+    */
+
 }
