@@ -1,8 +1,8 @@
 package DataBaseProject.demo.domain.service;
 
-import DataBaseProject.demo.controller.api.dto.myProjectResponse;
+import DataBaseProject.demo.controller.api.dto.ProjectResponse;
 import DataBaseProject.demo.controller.api.dto.StudentStatusResponse;
-import DataBaseProject.demo.controller.api.dto.myStudyGroupResponse;
+import DataBaseProject.demo.controller.api.dto.StudyGroupResponse;
 import DataBaseProject.demo.domain.Entity.project.Project;
 import DataBaseProject.demo.domain.Entity.Student;
 import DataBaseProject.demo.domain.Entity.StudyGroup;
@@ -23,6 +23,7 @@ public class MyCheckService {
     private final StudyGroupRepository studyGroupRepository;
     private final ProjectRepository projectRepository;
 
+    //나의 정보 조회
     public StudentStatusResponse myStatus(String studentId) {
 
         Student student = studentRepository.findByStudentId(studentId);
@@ -36,11 +37,12 @@ public class MyCheckService {
         );
     }
 
-    public List<myStudyGroupResponse> myStudyGruop(String studentId){
+    //나의 스터디 그룹 조회
+    public List<StudyGroupResponse> myStudyGruop(String studentId){
         List<StudyGroup> mystudyGroup = studyGroupRepository.findByStudentsStudentId(studentId);
 
         return mystudyGroup.stream()
-                .map(group -> new myStudyGroupResponse(
+                .map(group -> new StudyGroupResponse(
                         group.getGroupId(),
                         group.getGroupName(),
                         group.getActivityDay(),
@@ -51,14 +53,15 @@ public class MyCheckService {
                 .toList();
     }
 
-    public myProjectResponse myProject(String studentId, String projectName){
+    //나의 프로젝트 조회
+    public ProjectResponse myProject(String studentId, String projectName){
         Project myProject = projectRepository.findByLeaderIdAndName(studentId, projectName);
 
         if(myProject==null){
             return null;
         }
 
-        return new myProjectResponse(
+        return new ProjectResponse(
                 myProject.getName(),
                 myProject.getCreateDate(),
                 myProject.getTopic(),

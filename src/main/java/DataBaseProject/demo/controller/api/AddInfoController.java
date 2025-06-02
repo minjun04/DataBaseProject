@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/addInfo")
-public class addInfoController {
+public class AddInfoController {
 
     private final AddInfoService addInfoService;
     @GetMapping("/project")

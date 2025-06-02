@@ -19,6 +19,7 @@ public class AddInfoService {
     private final ProjectRepository projectRepository;
     private final StudentRepository studentRepository;
 
+    //정보조회에서 스터디 그룹 자세히 보기 처리
     public List<StudentStatusResponse> addInfoStudyGroupMember(int groupId){
         StudyGroup studyGroup = studyGroupRepository.findByGroupId(groupId);
         List<Student> studyMember = studentRepository.findByStudyGroup(studyGroup);
@@ -34,6 +35,7 @@ public class AddInfoService {
                 .toList();
     }
 
+    //정보조회에서 프로젝트 자세히 보기 처리
     public List<StudentStatusResponse> addInfoProject(String leaderId, String name){
         Project project = projectRepository.findByLeaderIdAndName(leaderId,name);
         List<Student> projectMember =studentRepository.findByProject(project);

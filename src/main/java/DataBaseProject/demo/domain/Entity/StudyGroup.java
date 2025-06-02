@@ -26,6 +26,7 @@ public class StudyGroup {
     private String activityTime;
 
     private String topic;
+    private String TopTopic;
 
    @Column(name="leaderId", nullable = false)
     private String leaderId;

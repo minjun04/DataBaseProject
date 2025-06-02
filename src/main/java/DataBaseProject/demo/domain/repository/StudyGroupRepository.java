@@ -8,6 +8,9 @@ import java.util.List;
 
 public interface StudyGroupRepository extends JpaRepository<StudyGroup, String> {
     List<StudyGroup> findByStudentsStudentId(String studentId);
-
     StudyGroup findByGroupId(int groupId);
+    List<StudyGroup> findByTopTopic(String topTopic);
+    List<StudyGroup> findByTopic(String topic);
+
+
 }

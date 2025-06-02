@@ -1,8 +1,8 @@
 package DataBaseProject.demo.controller.api;
 
-import DataBaseProject.demo.controller.api.dto.myProjectResponse;
+import DataBaseProject.demo.controller.api.dto.ProjectResponse;
 import DataBaseProject.demo.controller.api.dto.StudentStatusResponse;
-import DataBaseProject.demo.controller.api.dto.myStudyGroupResponse;
+import DataBaseProject.demo.controller.api.dto.StudyGroupResponse;
 import DataBaseProject.demo.domain.service.MyCheckService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +30,7 @@ public class MyStatusCheckController {
     @GetMapping("/studyInfo")
     public ResponseEntity<?> myStudyGroupCheck(String studentId){
 
-        List<myStudyGroupResponse> response = myCheckService.myStudyGruop(studentId);
+        List<StudyGroupResponse> response = myCheckService.myStudyGruop(studentId);
 
         return ResponseEntity.ok(response);
     }
@@ -38,7 +38,7 @@ public class MyStatusCheckController {
     @GetMapping("/projectInfo")
     public ResponseEntity<?> myProjectCheck(String studentId, String projectName){
 
-        myProjectResponse response = myCheckService.myProject(studentId,projectName);
+        ProjectResponse response = myCheckService.myProject(studentId,projectName);
 
         return ResponseEntity.ok(response);
     }
