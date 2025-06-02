@@ -1,0 +1,208 @@
+.before-login-site {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.before-login-site .div {
+  background-color: #ffffff;
+  width: 1920px;
+  height: 1639px;
+  position: relative;
+}
+
+.before-login-site .overlap {
+  position: absolute;
+  width: 1920px;
+  height: 647px;
+  top: 0;
+  left: 0;
+}
+
+.before-login-site .element {
+  height: 580px;
+  top: 67px;
+  background-image: url(https://c.animaapp.com/yZHgoGWP/img/------01.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  width: 1920px;
+  left: 0;
+}
+
+.before-login-site .overlap-group {
+  position: relative;
+  width: 582px;
+  height: 150px;
+  top: 184px;
+  left: 380px;
+}
+
+.before-login-site .text-wrapper {
+  width: 582px;
+  top: 0;
+  left: 0;
+  font-family: "NEXON Lv1 Gothic-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 40px;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.before-login-site .p {
+  width: 582px;
+  top: 60px;
+  left: 0;
+  font-family: "NEXON Lv1 Gothic-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.before-login-site .element-2 {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  gap: 1750px;
+  padding: 20px 17px;
+  top: 0;
+  background-color: #ffffff;
+  position: absolute;
+  width: 1920px;
+  left: 0;
+}
+
+.before-login-site .text-wrapper-2 {
+  position: relative;
+  width: 76px;
+  height: 27px;
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  font-style: italic;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.before-login-site .rectangle {
+  position: relative;
+  width: 57px;
+  height: 19px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.before-login-site .text-wrapper-3 {
+  position: absolute;
+  width: 33px;
+  top: 25px;
+  left: 1858px;
+  font-family: "Inter", Helvetica;
+  font-weight: 900;
+  font-style: italic;
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.before-login-site .introduction {
+  position: absolute;
+  width: 1920px;
+  height: 800px;
+  top: 839px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.before-login-site .overlap-2 {
+  position: absolute;
+  width: 472px;
+  height: 650px;
+  top: 58px;
+  left: 380px;
+  background-image: url(https://c.animaapp.com/yZHgoGWP/img/rectangle-56.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.before-login-site .text-wrapper-4 {
+  width: 328px;
+  height: 128px;
+  top: 86px;
+  left: 78px;
+  font-family: "NEXON Lv1 Gothic-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.before-login-site .text-wrapper-5 {
+  width: 315px;
+  height: 362px;
+  top: 176px;
+  left: 78px;
+  font-family: "NEXON Lv1 Gothic-Light", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.before-login-site .overlap-3 {
+  position: absolute;
+  width: 472px;
+  height: 650px;
+  top: 58px;
+  left: 1068px;
+  background-image: url(https://c.animaapp.com/yZHgoGWP/img/rectangle-57.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.before-login-site .text-wrapper-6 {
+  width: 328px;
+  height: 128px;
+  top: 86px;
+  left: 66px;
+  font-family: "NEXON Lv1 Gothic-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.before-login-site .text-wrapper-7 {
+  width: 315px;
+  height: 362px;
+  top: 176px;
+  left: 79px;
+  font-family: "NEXON Lv1 Gothic-Light", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
