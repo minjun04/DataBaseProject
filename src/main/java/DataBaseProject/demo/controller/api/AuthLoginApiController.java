@@ -14,7 +14,7 @@ public class AuthLoginApiController {
 
     private final AuthService authService;
 
-    @PostMapping("/login")
+    @PostMapping("/templates/login")
     public ResponseEntity<?> authLogin(String studentId) {
 
         Boolean response = authService.login(studentId);
