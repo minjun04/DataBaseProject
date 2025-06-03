@@ -18,7 +18,7 @@ public class Project {
     private String name;
 
     @Id
-    @Column(name="leaderId",nullable=false)
+    @Column(name="leader_id",nullable=false)
     private String leaderId;
 
     private LocalDate createDate;

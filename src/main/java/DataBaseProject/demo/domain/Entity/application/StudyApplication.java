@@ -16,15 +16,15 @@ public class StudyApplication {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "applicationId")
+    @Column(name = "application_id")
     private Integer applicationId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "studentId", referencedColumnName = "studentId")
+    @JoinColumn(name = "student_id", referencedColumnName = "student_id")
     private Student student;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "groupId", referencedColumnName = "groupId")
+    @JoinColumn(name = "group_id", referencedColumnName = "group_id")
     private StudyGroup studyGroup;
 
     @Column(name = "status")

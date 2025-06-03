@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Student {
     @Id
-    @Column(name = "studentId", nullable = false)
+    @Column(name = "student_id", nullable = false)
     private String studentId;
 
     @Column(nullable = false)
@@ -33,15 +33,15 @@ public class Student {
     @ManyToOne
     @JoinColumns({
             @JoinColumn(name = "projectName", referencedColumnName = "projectName"),
-            @JoinColumn(name = "leaderId", referencedColumnName = "leaderId")
+            @JoinColumn(name = "leader_id", referencedColumnName = "leader_id")
     })
     private Project project;
 
     @ManyToMany
     @JoinTable(
             name = "Student_StudyGroup",
-            joinColumns = @JoinColumn(name = "studentId"),
-            inverseJoinColumns = @JoinColumn(name = "groupId")
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "group_id")
     )
     private List<StudyGroup> studyGroup;
 

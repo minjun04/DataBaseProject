@@ -13,8 +13,8 @@
   <div class="login-wrapper">
     <h1 class="title"><i>Ajoudy</i></h1>
 
-    <form class="login-form">
-      <input type="text" id="username" name="username" placeholder="아이디" class="input-box" />
+    <form class="login-form" id="login-form">
+      <input type="text" id="student_id" name="student_id" placeholder="아이디" class="input-box" />
       <input type="password" id="password" name="password" placeholder="비밀번호" class="input-box" />
 
       <button type="submit" class="login-button">
@@ -25,30 +25,7 @@
   </div>
 </div>
 
-<script>
-  document.getElementById("login-form").addEventListener("submit", function(e) {
-    e.preventDefault();  // form submit 기본 동작 막기
-
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    fetch("/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ username, password })
-    })
-    .then(res => res.json())
-    .then(data => {
-      if(data.success) {
-        window.location.href = "/main";  // 성공시 이동
-      } else {
-        alert("로그인 실패");
-      }
-    });
-  });
-</script>
+<script src="/js/login.js" defer></script>
 
 </body>
 </html>

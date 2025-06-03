@@ -23,12 +23,12 @@ public class ProjectApplication {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumns({
             @JoinColumn(name = "name", referencedColumnName = "projectName"),
-            @JoinColumn(name = "leaderId", referencedColumnName = "leaderId")
+            @JoinColumn(name = "leader_id", referencedColumnName = "leader_id")
     })
     private Project project;
 
     @ManyToOne
-    @JoinColumn(name = "studentId", referencedColumnName = "studentId")
+    @JoinColumn(name = "student_id", referencedColumnName = "student_id")
     private Student student;
 
     private String status;

@@ -16,7 +16,7 @@ public class StudyGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="groupId",nullable = false)
+    @Column(name="group_id",nullable = false)
     private int groupId;
 
     private String groupName;
@@ -28,7 +28,7 @@ public class StudyGroup {
     private String topic;
     private String topTopic;
 
-    @JoinColumn(name = "studentId", referencedColumnName = "leaderId")
+    @JoinColumn(name = "student_id", referencedColumnName = "leaderId")
     private String leaderId;
 
     private int maxMember;
