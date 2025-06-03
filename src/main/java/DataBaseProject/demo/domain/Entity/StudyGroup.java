@@ -35,6 +35,7 @@ public class StudyGroup {
 
     private LocalDate createDate;
 
+    @ManyToMany(mappedBy = "studyGroup")
     private List<Student> students;
 
 }
