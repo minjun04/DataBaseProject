@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-@IdClass(domain.Entity.ProjectApplicationId.class)
+@IdClass(ProjectApplicationId.class)
 @Table(name = "ProjectApplication")
 @NoArgsConstructor
 @AllArgsConstructor
