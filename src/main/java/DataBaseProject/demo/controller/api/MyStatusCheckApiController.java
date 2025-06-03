@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/myStatus")
-public class MyStatusCheckController {
+public class MyStatusCheckApiController {
 
     private final MyCheckService myCheckService;
 

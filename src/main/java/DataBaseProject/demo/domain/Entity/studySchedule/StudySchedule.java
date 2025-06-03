@@ -1,6 +1,6 @@
-package DataBaseProject.demo.domain.Entity;
+package DataBaseProject.demo.domain.Entity.studySchedule;
 
-import domain.Entity.StudyScheduleId;
+import DataBaseProject.demo.domain.Entity.Student;
 import jakarta.persistence.*;
 import lombok.*;
 

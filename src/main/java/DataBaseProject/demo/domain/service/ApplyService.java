@@ -1,7 +1,7 @@
 package DataBaseProject.demo.domain.service;
 
 import DataBaseProject.demo.domain.Entity.Student;
-import DataBaseProject.demo.domain.Entity.StudyApplication;
+import DataBaseProject.demo.domain.Entity.application.StudyApplication;
 import DataBaseProject.demo.domain.Entity.StudyGroup;
 import DataBaseProject.demo.domain.repository.ApplyRepository;
 import DataBaseProject.demo.domain.repository.StudyGroupRepository;

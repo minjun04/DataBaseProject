@@ -1,5 +1,6 @@
-package DataBaseProject.demo.domain.Entity;
+package DataBaseProject.demo.domain.Entity.application;
 
+import DataBaseProject.demo.domain.Entity.Student;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,9 +14,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProjectApplication {
-    @Id
-    @Column(name = "application_id")
-    private int applicationId;
 
     @Id
     @Column(name = "student_id", nullable = false)

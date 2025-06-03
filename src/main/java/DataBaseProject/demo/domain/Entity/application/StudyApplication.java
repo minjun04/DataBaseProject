@@ -1,5 +1,7 @@
-package DataBaseProject.demo.domain.Entity;
+package DataBaseProject.demo.domain.Entity.application;
 
+import DataBaseProject.demo.domain.Entity.Student;
+import DataBaseProject.demo.domain.Entity.StudyGroup;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
