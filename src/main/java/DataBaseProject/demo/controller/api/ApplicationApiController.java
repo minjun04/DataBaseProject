@@ -1,6 +1,7 @@
 package DataBaseProject.demo.controller.api;
 
-import DataBaseProject.demo.controller.api.dto.ApplyStudyGroupResponse;
+import DataBaseProject.demo.controller.api.dto.ApplyStudyGroupRequest;
+import DataBaseProject.demo.domain.Entity.application.StudyApplication;
 import DataBaseProject.demo.domain.service.ApplyService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,11 +18,19 @@ public class ApplicationApiController {
 
     //신청
     @GetMapping("/apply")
-    public boolean studyGroupApply(@RequestBody ApplyStudyGroupResponse response){
-        boolean applyStudyGroupResponse = applyService.studyGroupApply(response.getSelfIntroduction(),response.getStudent(),response.getGroupId());
+    public boolean studyGroupApply(@RequestBody ApplyStudyGroupRequest request){
+        boolean applyStudyGroupResponse = applyService.studyGroupApply(request.getSelfIntroduction(),request.getStudentId(),request.getGroupId());
 
         return applyStudyGroupResponse;
     }
+    
+    @GetMapping("/accept")
+    public boolean studyGroupAccept(StudyApplication studyApplication){
+        return applyService.applyAccept(studyApplication);
+    }
 
-
+    @GetMapping("/refuse")
+    public boolean studyGroupRefuse(StudyApplication studyApplication){
+        return applyService.applyRefuse(studyApplication);
+    }
 }

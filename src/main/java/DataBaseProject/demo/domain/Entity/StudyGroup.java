@@ -38,4 +38,14 @@ public class StudyGroup {
     @ManyToMany(mappedBy = "studyGroup")
     private List<Student> students;
 
+    public StudyGroup(String groupName, String activityDay, String activityTime, String leaderId,String topic, String topTopic, int maxMember, LocalDate createDate){
+        this.groupName=groupName;
+        this.activityDay=activityDay;
+        this.activityTime=activityTime;
+        this.leaderId=leaderId;
+        this.topic=topic;
+        this.topTopic=topTopic;
+        this.maxMember=maxMember;
+        this.createDate=createDate;
+    }
 }

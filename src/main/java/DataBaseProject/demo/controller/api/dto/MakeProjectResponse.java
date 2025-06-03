@@ -5,11 +5,9 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class StudyGroupResponse {
+public class MakeProjectResponse {
     private String leaderName;
-    private String groupName;
-    private String activityDay;
-    private String activityTime;
+    private String name;
     private String topic;
-    private int maxMember;
+    private int personNum;
 }

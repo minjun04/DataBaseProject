@@ -4,6 +4,7 @@ import DataBaseProject.demo.domain.Entity.Student;
 import DataBaseProject.demo.domain.Entity.application.StudyApplication;
 import DataBaseProject.demo.domain.Entity.StudyGroup;
 import DataBaseProject.demo.domain.repository.ApplyRepository;
+import DataBaseProject.demo.domain.repository.StudentRepository;
 import DataBaseProject.demo.domain.repository.StudyGroupRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,10 +17,12 @@ public class ApplyService {
 
     private final StudyGroupRepository studyGroupRepository;
     private final ApplyRepository applyRepository;
-
+    private final StudentRepository studentRepository;
     //스터디 그룹 신청
-    public boolean studyGroupApply(String SelfInfo, Student student, int groupId){
+    public boolean studyGroupApply(String SelfInfo, String studentId, int groupId){
         StudyGroup studyGroup =studyGroupRepository.findByGroupId(groupId);
+        Student student=studentRepository.findByStudentId(studentId);
+
         StudyApplication studyApplication = new StudyApplication(student,studyGroup,"대기",LocalDate.now(),SelfInfo);
         applyRepository.save(studyApplication);
         return true;
@@ -53,4 +56,8 @@ public class ApplyService {
             return false;
         }
     }
+
+
+
+
 }

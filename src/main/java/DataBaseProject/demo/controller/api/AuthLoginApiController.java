@@ -14,12 +14,11 @@ public class AuthLoginApiController {
 
     private final AuthService authService;
 
-    @PostMapping("/templates/login")
+    @PostMapping("/login")
     public ResponseEntity<?> authLogin(String studentId) {
 
         Boolean response = authService.login(studentId);
         return ResponseEntity.ok(response);
 
     }
-
 }

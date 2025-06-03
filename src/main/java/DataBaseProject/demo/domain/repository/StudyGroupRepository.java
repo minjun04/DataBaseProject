@@ -3,6 +3,7 @@ package DataBaseProject.demo.domain.repository;
 import DataBaseProject.demo.domain.Entity.Student;
 import DataBaseProject.demo.domain.Entity.StudyGroup;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
