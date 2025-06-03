@@ -18,7 +18,7 @@ public class Project {
     private String name;
 
     @Id
-    @Column(name="leaderId",nullable=false)
+    @JoinColumn(name = "leaderId", referencedColumnName = "studentId")
     private String leaderId;
 
     private LocalDate createDate;
@@ -27,7 +27,6 @@ public class Project {
 
     private int personnel; //수용가능한 인원 수
 
-    @OneToMany(mappedBy = "project")
     private List<Student> students;
 
 }

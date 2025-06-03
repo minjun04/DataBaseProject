@@ -44,6 +44,8 @@ public class Student {
             joinColumns = @JoinColumn(name = "studentId"),
             inverseJoinColumns = @JoinColumn(name = "groupId")
     )
+
+    @OneToMany(mappedBy = "project")
     private List<StudyGroup> studyGroup;
 
 }

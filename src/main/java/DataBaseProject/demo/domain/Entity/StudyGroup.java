@@ -28,14 +28,14 @@ public class StudyGroup {
     private String topic;
     private String topTopic;
 
-   @Column(name="leaderId", nullable = false)
+    @JoinColumn(name = "studentId", referencedColumnName = "leaderId")
     private String leaderId;
 
     private int maxMember;
 
     private LocalDate createDate;
 
-    @ManyToMany(mappedBy = "studyGroup")
+    @ManyToMany(mappedBy = "project")
     private List<Student> students;
 
 }
