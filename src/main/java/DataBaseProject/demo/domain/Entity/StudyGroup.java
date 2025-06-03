@@ -1,8 +1,9 @@
-package domain.Entity;
+package DataBaseProject.demo.domain.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Getter
@@ -25,18 +26,16 @@ public class StudyGroup {
     private String activityTime;
 
     private String topic;
+    private String topTopic;
 
-    @Column(name="leaderId", nullable = false)
+   @Column(name="leaderId", nullable = false)
     private String leaderId;
 
     private int maxMember;
 
     private LocalDate createDate;
 
+    @ManyToMany(mappedBy = "studyGroup")
+    private List<Student> students;
 
-    @ManyToMany
-    @JoinColumn(name = "leaderId", referencedColumnName = "studentId",
-            foreignKey = @ForeignKey(name = "fk_studygroup_student", foreignKeyDefinition = "FOREIGN KEY (leaderId) REFERENCES student(studentId) ON DELETE CASCADE"))
-    private Student leader;
-    
 }

@@ -1,0 +1,136 @@
+.login {
+  background-color: #00000033;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login .group-wrapper {
+  background-color: #00000033;
+  width: 1920px;
+  height: 1086px;
+}
+
+.login .group {
+  position: relative;
+  width: 770px;
+  height: 421px;
+  top: 293px;
+  left: 577px;
+}
+
+.login .overlap {
+  position: relative;
+  width: 766px;
+  height: 421px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+}
+
+.login .rectangle {
+  width: 373px;
+  top: 211px;
+  left: 197px;
+  background-color: #2da8cd;
+  position: absolute;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.login .div {
+  width: 373px;
+  top: 154px;
+  left: 197px;
+  background-color: #2da8cd;
+  position: absolute;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.login .overlap-group-wrapper {
+  position: absolute;
+  width: 96px;
+  height: 50px;
+  top: 211px;
+  left: 90px;
+}
+
+.login .overlap-group {
+  position: relative;
+  width: 94px;
+  height: 50px;
+}
+
+.login .rectangle-2 {
+  width: 78px;
+  top: 0;
+  left: 8px;
+  background-color: #ffffff;
+  position: absolute;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.login .text-wrapper {
+  position: absolute;
+  width: 94px;
+  height: 12px;
+  top: 19px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.login .overlap-wrapper {
+  position: absolute;
+  width: 96px;
+  height: 50px;
+  top: 154px;
+  left: 90px;
+}
+
+.login .div-wrapper {
+  position: absolute;
+  width: 177px;
+  height: 71px;
+  top: 294px;
+  left: 294px;
+  background-color: #368be6;
+  border-radius: 30px;
+}
+
+.login .text-wrapper-2 {
+  position: absolute;
+  width: 54px;
+  top: 24px;
+  left: 62px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .text-wrapper-3 {
+  position: absolute;
+  height: 46px;
+  top: 56px;
+  left: 289px;
+  font-family: "NEXON Lv1 Gothic-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

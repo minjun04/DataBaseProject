@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="before-login-site" data-model-id="15:20">
+      <div class="div">
+        <div class="overlap">
+          <div class="element">
+            <div class="overlap-group">
+              <div class="text-wrapper">스터디그룹 및 파란학기 매칭</div>
+              <p class="p">아주대 내 스터디 그룹 및 파란학기 매칭시스템</p>
+            </div>
+          </div>
+          <div class="element-2">
+            <div class="text-wrapper-2">Ajoudy</div>
+            <div class="rectangle"></div>
+            <div class="text-wrapper-3">login</div>
+          </div>
+        </div>
+        <div class="introduction">
+          <div class="overlap-2">
+            <div class="text-wrapper-4">스터디그룹 매칭</div>
+            <p class="text-wrapper-5">아주대 내에서 스터디그룹을 매칭해주고 강의실 예약까지 관리합니다.</p>
+          </div>
+          <div class="overlap-3">
+            <div class="text-wrapper-6">파란학기 매칭</div>
+            <p class="text-wrapper-7">
+              아주대 내의 고유한 프로젝트인 파락학기의 팀을 구할 수 있고 강의실 예약까지 관리합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
