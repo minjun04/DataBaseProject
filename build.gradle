@@ -19,12 +19,18 @@ repositories {
 
 dependencies {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	compileOnly 'org.projectlombok:lombok:1.18.30'
 =======
 
 	implementation 'mysql:mysql-connector-java:8.0.33'
 	implementation 'org.projectlombok:lombok:1.18.30'
 >>>>>>> 9a918323e930285741c7d74c1c52620e810db917
+=======
+
+	implementation 'mysql:mysql-connector-java:8.0.33'
+	implementation 'org.projectlombok:lombok:1.18.30'
+>>>>>>> 6f7ed1f3ee7070fb6d981d6c68327cea4560c9be
 	annotationProcessor 'org.projectlombok:lombok:1.18.30'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
