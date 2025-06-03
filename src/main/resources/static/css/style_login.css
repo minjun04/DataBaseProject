@@ -1,136 +1,125 @@
-.login {
-  background-color: #00000033;
+.login-typing {
+  background-color: #8b91ff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
 
-.login .group-wrapper {
-  background-color: #00000033;
+.login-typing .overlap-group-wrapper {
+  background-color: #8b91ff;
   width: 1920px;
-  height: 1086px;
+  height: 2000px;
 }
 
-.login .group {
-  position: relative;
-  width: 770px;
-  height: 421px;
-  top: 293px;
-  left: 577px;
-}
-
-.login .overlap {
+.login-typing .overlap-group {
   position: relative;
   width: 766px;
-  height: 421px;
-  background-color: #d9d9d9;
-  border-radius: 20px;
-}
-
-.login .rectangle {
-  width: 373px;
-  top: 211px;
-  left: 197px;
-  background-color: #2da8cd;
-  position: absolute;
-  height: 50px;
-  border-radius: 10px;
-}
-
-.login .div {
-  width: 373px;
-  top: 154px;
-  left: 197px;
-  background-color: #2da8cd;
-  position: absolute;
-  height: 50px;
-  border-radius: 10px;
-}
-
-.login .overlap-group-wrapper {
-  position: absolute;
-  width: 96px;
-  height: 50px;
-  top: 211px;
-  left: 90px;
-}
-
-.login .overlap-group {
-  position: relative;
-  width: 94px;
-  height: 50px;
-}
-
-.login .rectangle-2 {
-  width: 78px;
-  top: 0;
-  left: 8px;
+  height: 1683px;
+  top: 174px;
+  left: 577px;
   background-color: #ffffff;
-  position: absolute;
-  height: 50px;
-  border-radius: 10px;
 }
 
-.login .text-wrapper {
-  position: absolute;
-  width: 94px;
-  height: 12px;
-  top: 19px;
-  left: 0;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 14px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+.login-typing .frame {
+  flex-direction: column;
+  width: 417px;
+  gap: 300px;
+  top: 290px;
+  left: 174px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.login .overlap-wrapper {
-  position: absolute;
-  width: 96px;
-  height: 50px;
-  top: 154px;
-  left: 90px;
-}
-
-.login .div-wrapper {
-  position: absolute;
-  width: 177px;
-  height: 71px;
-  top: 294px;
-  left: 294px;
-  background-color: #368be6;
-  border-radius: 30px;
-}
-
-.login .text-wrapper-2 {
-  position: absolute;
-  width: 54px;
-  top: 24px;
-  left: 62px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.login .text-wrapper-3 {
-  position: absolute;
-  height: 46px;
-  top: 56px;
-  left: 289px;
+.login-typing .text-wrapper {
+  align-self: stretch;
+  height: 156px;
+  margin-top: -1.00px;
   font-family: "NEXON Lv1 Gothic-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 40px;
+  font-size: 48px;
   text-align: center;
+  position: relative;
   letter-spacing: 0;
   line-height: normal;
+}
+
+.login-typing .div {
+  flex-direction: column;
+  width: 374px;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.login-typing .div-wrapper {
+  gap: 10px;
+  padding: 16px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #000000;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.login-typing .text-wrapper-2 {
+  flex: 1;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "NEXON Lv1 Gothic-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000b0;
+  font-size: 16px;
   white-space: nowrap;
+  position: relative;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login-typing .frame-2 {
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  align-self: stretch;
+  width: 100%;
+  background-color: #005bac;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #000000;
+  display: flex;
+  position: relative;
+}
+
+.login-typing .text-wrapper-3 {
+  flex: 1;
+  margin-top: -10.50px;
+  margin-bottom: -8.50px;
+  font-family: "NEXON Lv1 Gothic-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.input-field {
+  border: none;
+  outline: none; /* 포커스 시 생기는 파란 테두리도 제거 */
+  background-color: transparent; /* 필요 시 배경도 투명하게 */
+  font-size: 16px; /* 텍스트 크기 */
+  width: 100%;
 }
