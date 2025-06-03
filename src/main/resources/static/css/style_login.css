@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  width: 350px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  color: #5c8be6;
+  margin-bottom: 50px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  height: 50px;
+  background-color: #abd9f2;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ajoudy-text {
+  font-weight: 900;
+  font-style: italic;
+  margin-right: 8px;
+}
+
+.login-text {
+  font-weight: normal;
+}
