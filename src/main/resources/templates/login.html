@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="style_login.css" />
+  <link rel="stylesheet" href="/css/style_login.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,900;1,900&display=swap');
   </style>
@@ -21,7 +21,34 @@
         <span class="ajoudy-text">Ajoudy</span> <span class="login-text">로그인</span>
       </button>
     </form>
+
   </div>
 </div>
+
+<script>
+  document.getElementById("login-form").addEventListener("submit", function(e) {
+    e.preventDefault();  // form submit 기본 동작 막기
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ username, password })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.success) {
+        window.location.href = "/main";  // 성공시 이동
+      } else {
+        alert("로그인 실패");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
