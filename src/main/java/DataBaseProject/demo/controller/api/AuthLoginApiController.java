@@ -23,8 +23,6 @@ public class AuthLoginApiController {
 
         Boolean response = authService.login(studentId);
 
-        System.out.println("받은 studentId: " + studentId);
-
         Map<String, Object> result = new HashMap<>();
         result.put("success", response);
         return ResponseEntity.ok(result);

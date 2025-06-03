@@ -23,10 +23,7 @@ public class AuthService {
     }
 
     public boolean login(String studentId)  {
-        System.out.println("넘어온 studentId = [" + studentId + "]");
-        System.out.println("길이 = " + studentId.length());
         Student student = studentRepository.findByStudentId(studentId);
-        System.out.println("studentRepository 결과: " + student);
 
         if(student == null){
             return false;
