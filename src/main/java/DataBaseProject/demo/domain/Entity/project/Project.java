@@ -27,6 +27,7 @@ public class Project {
 
     private int personnel; //수용가능한 인원 수
 
+    @ManyToMany(mappedBy = "studyGroup")
     private List<Student> students;
 
 }
