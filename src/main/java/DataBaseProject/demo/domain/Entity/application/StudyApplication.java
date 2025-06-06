@@ -1,7 +1,5 @@
-package DataBaseProject.demo.domain.Entity.application;
+package DataBaseProject.demo.domain.Entity;
 
-import DataBaseProject.demo.domain.Entity.Student;
-import DataBaseProject.demo.domain.Entity.StudyGroup;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -20,11 +18,11 @@ public class StudyApplication {
     private Integer applicationId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "student_id", referencedColumnName = "student_id")
+    @JoinColumn(name = "student_id", referencedColumnName = "studentId")
     private Student student;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "group_id", referencedColumnName = "group_id")
+    @JoinColumn(name = "group_id", referencedColumnName = "groupId")
     private StudyGroup studyGroup;
 
     @Column(name = "status")
