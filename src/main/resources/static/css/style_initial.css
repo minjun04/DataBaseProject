@@ -8,97 +8,64 @@
 body {
     background: #fafafa;
 }
-/* 상단바 */
-.topbar {
+
+/* 헤더 전체 스타일 */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    background: #fff;
     padding: 0 30px;
     border-bottom: 1px solid #ddd;
+    background: #fff;
 }
 
+/* Ajoudy 로고 */
 .logo {
     font-family: 'Inter-BlackItalic';
     font-style: italic;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 24px;   /* 기존보다 약간 더 크게 조정 */
     color: #368be6;
 }
-.topbar-right {
+
+/* 검색창 */
+.search-box input {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+/* 우측 메뉴 묶음 */
+.menu-icons {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* 검색바 + 별 + 메뉴버튼 묶음 */
-.search-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* 검색바 */
-.search-bar {
-    padding: 3px 15px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: 900;
-    min-width: 200px;
-    text-align: left;
-}
-
-/* ★ 박스 */
-.star-box {
-    width: 22px;
-    height: 22px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 22px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
+/* 햄버거 메뉴 버튼 */
+.menu-btn {
+    font-size: 24px;
     cursor: pointer;
 }
 
-.menu-icon .bar {
-    width: 24px;
-    height: 2px;
-    background: #000;
+/* 별 아이콘 */
+.star-icon {
+    font-size: 22px;
+    color: #FFD700;
 }
 
-
-.star-box {
-    width: 22px;
-    height: 22px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 22px;
-    font-weight: bold;
-}
-
+/* 로그아웃 버튼 */
 .logout-btn {
-    width: 57px;
-    height: 19px;
     border: 1px solid #000;
     border-radius: 15px;
-    text-align: center;
-    line-height: 19px;
-    font-weight: 900;
-    font-style: italic;
+    padding: 5px 10px;
     font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
     color: #005bac;
+    cursor: pointer;
 }
 
 /* 전체 레이아웃 */
@@ -280,4 +247,10 @@ body {
     font-size: 14px;
     color: #888;
     white-space: nowrap;
+}
+
+.ai-img {
+    background-image: url("imgai-image.png");
+    background-size: cover;
+    background-position: center;
 }
