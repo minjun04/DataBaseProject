@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "NEXON Lv1 Gothic Light", sans-serif;
+}
+
+body {
+    background: #fafafa;
+}
+/* 상단바 */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: #fff;
+    padding: 0 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-family: 'Inter-BlackItalic';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+    color: #368be6;
+}
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 검색바 + 별 + 메뉴버튼 묶음 */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 검색바 */
+.search-bar {
+    padding: 3px 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 900;
+    min-width: 200px;
+    text-align: left;
+}
+
+/* ★ 박스 */
+.star-box {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 24px;
+    height: 2px;
+    background: #000;
+}
+
+
+.star-box {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    width: 57px;
+    height: 19px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 19px;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 12px;
+    color: #005bac;
+}
+
+/* 전체 레이아웃 */
+.container {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+/* 전체 레이아웃 */
+.container {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 200px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
+
+.menu-logo {
+    color: #2962ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu-item {
+    font-size: 14px;
+    padding: 10px 0;
+    padding-left: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-item.active {
+    background-color: #d4ebf2;
+    color: black;
+}
+
+/* 본문 */
+.main-content {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+.main-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e9e9e9;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.banner-left h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.banner-left p {
+    font-size: 15px;
+    color: #555;
+}
+
+
+
+/* HOT과 NEW 나란히 배치 */
+.study-section {
+    display: flex;
+    gap: 60px;
+    position: relative;
+}
+
+/* HOT 스터디 */
+.hot-section {
+    flex: 3;
+}
+
+.hot-cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 330px; /* 카드 너비 확장 */
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.card-img {
+    width: 250px;
+    height: 250px;
+    background-color: #ccc;
+    border-radius: 10px;
+
+    background-image: url("img/c_lnag.png");
+    background-size: cover;
+    background-position: center;
+}
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #444;
+}
+
+/* NEW 스터디 */
+.new-section {
+    flex: 2;
+}
+
+.new-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.new-card {
+    display: flex;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+}
+
+.new-img {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.new-text {
+    flex: 1;
+}
+
+.new-title {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.new-desc {
+    font-size: 12px;
+    color: #444;
+}
+
+/* 페이지네이션 위치 조정 */
+.pagination-center {
+    position: absolute;
+    top: 20px; /* 위치: HOT 타이틀 바로 아래 */
+    left: 56%;  /* 중앙보다 살짝 오른쪽 */
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #888;
+    white-space: nowrap;
+}
