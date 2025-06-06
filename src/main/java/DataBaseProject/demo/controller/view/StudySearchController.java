@@ -8,6 +8,7 @@ public class StudySearchController {
 
     @GetMapping("/studySearch")
     public String studySearch(){
+
         return "study_search";
     }
 }

@@ -6,8 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class InitialController {
 
-    @GetMapping("/initial")
+
+
+    @GetMapping("/loginAfter")
     public String index(){
-        return "initial";
+        return "loginAfter";
+    }
+
+    @GetMapping("/myPage")
+    public String myPage(){
+        return "mypage";
     }
 }

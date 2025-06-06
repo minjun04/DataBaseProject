@@ -146,7 +146,7 @@ body {
     color: #FFD700;
 }a
 
-.form-box textarea {
+.form-box textarea, .form-box input {
     width: 100%;
     padding: 16px;
     border: 1px solid #ccc;

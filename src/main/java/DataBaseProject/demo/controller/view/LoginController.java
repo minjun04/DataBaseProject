@@ -8,6 +8,12 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login(){
+
         return "login";
+    }
+
+    @GetMapping("/loginBefore")
+    public String index(){
+        return "loginBefore";
     }
 }
