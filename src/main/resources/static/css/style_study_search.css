@@ -230,3 +230,37 @@ body {
 .pagination button:hover {
     background-color: #d0d0d0;
 }
+#studyGroups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* studyGroups 안에 들어가는 카드 디자인 (기존 study-card와 동일하게 통일해줌) */
+#studyGroups .study-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#studyGroups .study-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#studyGroups .study-card button {
+    background: #c5e0f7;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}

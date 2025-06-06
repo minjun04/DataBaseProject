@@ -8,6 +8,7 @@ public class StudyManageController {
 
     @GetMapping("/studyManage")
     public String studyManage(){
+
         return "study_manage_reservation";
     }
 }
