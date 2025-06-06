@@ -40,17 +40,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // 스터디 그룹 목록 렌더링 함수
     function renderStudyGroups(groups) {
         studyGroups.innerHTML = ""; // 기존 목록 초기화
+        var i =0;
 
         groups.forEach(group => {
             const card = document.createElement("div");
+            const imageUrl = `/images/${i}.png`;
             card.className = "study-card";
             card.innerHTML = `
+                <img src="${imageUrl}" class="study-image">
                 <h3>${group.groupName}</h3>
                 <p>주제: ${group.topic}</p>
                 <p>리더: ${group.leaderName}</p>
                 <p>요일: ${group.activityDay} 시간:${group.activityTime}</p>
                 <p>인원: ${group.maxMember}명</p>
                 <button class="apply-btn">신청하기</button>
+
             `;
 
             studyGroups.appendChild(card);
@@ -60,6 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
             applyButton.addEventListener("click", function () {
                 window.location.href = "/studyApply";  // 이동할 페이지 경로만 지정
             });
+            i++;
+            if(i>4){
+            i=i%5
+            }
         });
     }
 });

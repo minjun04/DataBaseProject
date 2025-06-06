@@ -4,42 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>스터디그룹 및 파란학기 매칭</title>
-    <link rel="stylesheet" href="initial.css" />
+    <link rel="stylesheet" href="/css/style_initial.css" />
 </head>
 <body>
 
-<!-- 상단바 -->
-<header class="topbar">
+<header class="header">
     <div class="logo">Ajoudy</div>
-    <div class="topbar-right">
-
-        <div class="search-container">
-            <div class="search-bar">검색어를 입력하세요</div>
-            <div class="star-box">★</div>
-            <div class="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-
-        </div>
-
-        <div class="logout-btn">logout</div>
-
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="menu-icons">
+        <div class="menu-btn">&#9776;</div>
+        <div class="star-icon">★</div>
+        <div class="logout-btn">Logout</div>
     </div>
 </header>
 
 <div class="container">
 
-    <!-- 왼쪽 사이드바 -->
     <aside class="sidebar">
-
-        <ul class="menu">
-            <li class="menu-item active">홈</li>
-            <li class="menu-item">스터디그룹</li>
-            <li class="menu-item">파란학기</li>
-            <li class="menu-item">마이 페이지</li>
-        </ul>
+        <div class="menu">홈</div>
+        <div class="menu active">스터디그룹
+            <div class="submenu">
+                <div class="submenu-item selected">스터디 검색</div>
+                <div class="submenu-item">그룹 만들기</div>
+                <div class="submenu-item">스터디 관리</div>
+            </div>
+        </div>
+        <div class="menu">파란학기</div>
+        <div class="menu">마이페이지</div>
     </aside>
 
     <!-- 메인 콘텐츠 -->
