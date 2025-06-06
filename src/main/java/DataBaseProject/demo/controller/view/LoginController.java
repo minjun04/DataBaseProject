@@ -11,4 +11,9 @@ public class LoginController {
 
         return "login";
     }
+
+    @GetMapping("/loginBefore")
+    public String index(){
+        return "loginBefore";
+    }
 }

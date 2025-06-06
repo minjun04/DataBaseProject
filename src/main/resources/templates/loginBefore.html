@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>스터디그룹 및 파란학기 매칭</title>
+    <link rel="stylesheet" href="/css/style_initial.css"/>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="header">
+    <div class="logo">Ajoudy</div>
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="menu-icons">
+        <div class="menu-btn">&#9776;</div>
+        <div class="star-icon">★</div>
+        <div class="login-btn">Login</div>
+        <div class="login-btn" onclick="location.href='login.html'">Login</div>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+        <div class="menu">홈</div>
+        <div class="menu active">스터디그룹</div>
+        <div class="menu">파란학기</div>
+        <div class="menu">마이페이지</div>
+    </aside>
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+
+        <!-- 상단 배너 -->
+        <section class="main-banner">
+            <div class="banner-left">
+                <h1>스터디그룹 및 파란학기 매칭</h1>
+                <p>아주대 내에서 스터디그룹을 만들어 그룹원을 모집하고 강의실까지 예약하세요<br>파란학기 프로젝트를 만들고 조원을 모집하세요</p>
+            </div>
+            <div class="banner-right">
+                <div class="banner-img"></div>
+            </div>
+        </section>
+
+        <!-- HOT & NEW 스터디 병렬 -->
+        <section class="study-section">
+
+            <!-- HOT 스터디 -->
+            <div class="hot-section">
+                <h2>HOT 스터디 / 파란학기</h2>
+                <div class="hot-cards">
+                    <div class="card">
+                        <div class="card-img" style="background-image: url('/images/2.png');"></div>
+                        <div class="card-title">인공지능 공부해요 (인공지능)</div>
+                        <div class="card-desc">요즘 인공지능 너무 중요한데 혼자 공부를 어떻게 해야할지 모르겠어요ㅠㅠ<br>저희 같이 공부해요~!</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="background-image: url('/images/0.png');"></div>
+                        <div class="card-title">C익 웃자 (C언어)</div>
+                        <div class="card-desc">주변에서 다들 코딩 배우고 있어서 저도 한 번 해보려고요!<br> C언어가 나름 재미있다고 추천받았어요. 같이 공부할 분~</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="background-image: url('/images/8.png');"></div>
+                        <div class="card-title">퉁퉁퉁사후르 (운영체제)</div>
+                        <div class="card-desc">윤영체제 배우면 다른 코딩 과목 배울때 편하다던데 같이 운영체제 공부합시다!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 페이지네이션 -->
+            <div class="pagination-center">
+                <span>● ● ● ●</span> <span class="page-number">1/4</span>
+            </div>
+
+            <!-- NEW 스터디 -->
+            <div class="new-section">
+                <h2>NEW 스터디 / 파란학기</h2>
+                <div class="new-cards">
+                    <div class="new-card">
+                        <div class="new-img new-img-1"></div>
+                        <div class="new-text">
+                            <div class="new-title">파란학기 같이해요 (소프트웨어)</div>
+                            <div class="new-desc">다음 학기에 파란학기 할 예정인데 혹시 같이하실 분 있을까요?? 소프트웨어 쪽이면 좋을 것 같아요!</div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-img new-img-2"></div>
+                        <div class="new-text">
+                            <div class="new-title">이걸 참아?! (공업 유기학)</div>
+                            <div class="new-desc">ㅇㅌㅈ 교수님 공업 유기학 같이 스터디 하실 분?? 저 소스 공유 가능함다. 같이 스터디 해여ㅠㅠ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
