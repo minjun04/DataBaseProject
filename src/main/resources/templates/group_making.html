@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스터디 그룹 검색</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="group_making.css">
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="header">
+    <div class="logo">Ajoudy</div>
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="menu-icons">
+        <div class="menu-btn">&#9776;</div>
+        <div class="star-icon">★</div>
+        <div class="logout-btn">Logout</div>
+    </div>
+</header>
+
+<!-- 전체 컨테이너 -->
+<div class="container">
+
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+        <div class="menu">홈</div>
+        <div class="menu active">스터디그룹
+            <div class="submenu">
+                <div class="submenu-item">스터디 검색</div>
+                <div class="submenu-item selected">그룹 만들기</div>
+                <div class="submenu-item">스터디 관리</div>
+            </div>
+        </div>
+        <div class="menu">파란학기</div>
+        <div class="menu">마이페이지</div>
+    </aside>
+
+    <main class="main-content">
+        <h1 class="form-title">그룹 만들기</h1>
+
+        <div class="group-form">
+            <div class="form-row">
+                <label>조장 이름</label>
+                <input type="text" placeholder="조장 이름을 입력하세요">
+            </div>
+            <div class="form-row">
+                <label>그룹 이름</label>
+                <input type="text" placeholder="그룹 이름을 입력하세요">
+            </div>
+            <div class="form-row">
+                <label>주제</label>
+                <input type="text" placeholder="스터디 주제를 입력하세요">
+            </div>
+            <div class="form-row">
+                <label>인원</label>
+                <input type="number" placeholder="인원 수를 입력하세요">
+            </div>
+            <div class="form-row">
+                <label>활동 시간</label>
+                <input type="text" placeholder="예: 월요일 18:00">
+            </div>
+
+            <button class="create-btn">그룹 생성</button>
+        </div>
+    </main>
+
+</div>
+
+<script>
+    document.getElementById("computerBtn").addEventListener("click", function() {
+        document.getElementById("subCategories").style.display = "flex";
+        document.getElementById("studyList").style.display = "flex";
+    });
+</script>
+
+</body>
+</html>
