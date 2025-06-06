@@ -1,4 +1,4 @@
-package DataBaseProject.demo.domain.Entity.application;
+package DataBaseProject.demo.domain.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -8,21 +8,23 @@ import java.util.Objects;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudyApplicationId implements Serializable {
+public class ProjectApplicationId implements Serializable {
     private int applicationId;
+    private String studentId;
+    private int projectId;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof StudyApplicationId)) return false;
-        StudyApplicationId that = (StudyApplicationId) o;
+        if (!(o instanceof ProjectApplicationId)) return false;
+        ProjectApplicationId that = (ProjectApplicationId) o;
         return applicationId == that.applicationId &&
-                groupId == that.groupId &&
+                projectId == that.projectId &&
                 Objects.equals(studentId, that.studentId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(applicationId, studentId, groupId);
+        return Objects.hash(applicationId, studentId, projectId);
     }
 }
