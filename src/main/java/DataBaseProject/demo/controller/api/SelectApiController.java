@@ -23,7 +23,6 @@ public class SelectApiController {
     @GetMapping("/study/topTopic")
     public List<StudyGroupResponse> getStudyGroupsByTopic(@RequestParam String topTopic){
         List<StudyGroupResponse> studyGroups = selectService.getStudyGroupByToptopic(topTopic);
-        System.out.println("받은 topic: " + topTopic);
         return studyGroups;
     }
 
