@@ -2,24 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const computerBtn = document.getElementById("computerBtn");
     const subCategories = document.getElementById("subCategories");
     const studyGroups = document.getElementById("studyGroups");
+    const paginationDiv = document.getElementById("pagination");
 
-    // 컴퓨터 버튼 클릭 시 하위 카테고리 보여주기
+    let allGroups = []; // 전체 데이터 저장
+    const pageSize = 12;
+
+    // 컴퓨터 버튼 클릭 시
     computerBtn.addEventListener("click", function () {
         subCategories.style.display = "flex";
         studyGroups.style.display = "flex";
 
-        // 여기에 컴퓨터 버튼 눌렀을 때 DB에서 topTopic = 컴퓨터 조회하는 fetch 추가 가능
         fetch(`/select/study/topTopic?topTopic=컴퓨터`)
             .then(response => response.json())
             .then(data => {
-                renderStudyGroups(data);
+                allGroups = data;
+                renderStudyGroups(1);
+                renderPagination();
             })
             .catch(error => {
                 console.error("JSON 파싱 에러:", error);
             });
     });
 
-    // 각 하위 카테고리 버튼 클릭 시 서버 요청
+    // 하위 주제 버튼 클릭 시
     const subCategoryButtons = subCategories.querySelectorAll("button");
     subCategoryButtons.forEach(button => {
         button.addEventListener("click", function () {
@@ -28,8 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
             fetch(`/select/study/topic?topic=${encodeURIComponent(selectedTopic)}`)
                 .then(response => response.json())
                 .then(data => {
-                    renderStudyGroups(data);
-
+                    allGroups = data;
+                    renderStudyGroups(1);
+                    renderPagination();
                 })
                 .catch(error => {
                     console.error("JSON 파싱 에러:", error);
@@ -37,12 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 스터디 그룹 목록 렌더링 함수
-    function renderStudyGroups(groups) {
-        studyGroups.innerHTML = ""; // 기존 목록 초기화
-        var i =0;
+    function renderStudyGroups(pageNum) {
+        studyGroups.innerHTML = "";
+        let i = 0;
 
-        groups.forEach(group => {
+        const startIndex = (pageNum - 1) * pageSize;
+        const endIndex = startIndex + pageSize;
+        const currentGroups = allGroups.slice(startIndex, endIndex);
+
+        currentGroups.forEach(group => {
             const card = document.createElement("div");
             const imageUrl = `/images/${i}.png`;
             card.className = "study-card";
@@ -54,21 +63,43 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>요일: ${group.activityDay} 시간:${group.activityTime}</p>
                 <p>인원: ${group.maxMember}명</p>
                 <button class="apply-btn">신청하기</button>
-
             `;
 
             studyGroups.appendChild(card);
 
-            // 여기서 단순히 페이지 이동만 수행
             const applyButton = card.querySelector(".apply-btn");
             applyButton.addEventListener("click", function () {
-                window.location.href = "/studyApply";  // 이동할 페이지 경로만 지정
+                window.location.href = "/studyApply";
             });
-            i++;
-            if(i>4){
-            i=i%5
-            }
-        });
 
+            i++;
+            if (i > 11) i = i % 12;
+        });
     }
+
+    function renderPagination() {
+        paginationDiv.innerHTML = "";
+        const totalPages = Math.ceil(allGroups.length / pageSize);
+
+        for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+            const pageButton = document.createElement("button");
+            pageButton.textContent = pageNum;
+            pageButton.addEventListener("click", function () {
+                renderStudyGroups(pageNum);
+            });
+            paginationDiv.appendChild(pageButton);
+        }
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const menus = document.querySelectorAll(".has-submenu");
+
+        menus.forEach(menu => {
+            menu.addEventListener("click", function() {
+                const submenu = menu.querySelector(".submenu");
+                submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+            });
+        });
+    });
 });
