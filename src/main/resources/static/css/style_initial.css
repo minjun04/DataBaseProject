@@ -169,13 +169,11 @@ body {
 
 .card-img {
     width: 250px;
-    height: 250px;
-    background-color: #ccc;
-    border-radius: 10px;
-
-    background-image: url("img/c_lnag.png");
+    height: 180px;
     background-size: cover;
     background-position: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
 }
 .card-title {
     font-weight: bold;
@@ -210,11 +208,13 @@ body {
 }
 
 .new-img {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     background-color: #ddd;
-    border-radius: 10px;
-    margin-right: 15px;
+    border-radius: 12px;
+    margin-right: 20px;
+    background-size: cover;
+    background-position: center;
 }
 
 .new-text {
@@ -247,4 +247,11 @@ body {
     background-image: url("imgai-image.png");
     background-size: cover;
     background-position: center;
+}
+.study-image {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
 }
