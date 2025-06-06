@@ -27,16 +27,13 @@
     <!-- 사이드바 -->
     <aside class="sidebar">
         <div class="menu">홈</div>
-
-        <div class="menu has-submenu">
-            스터디그룹
+        <div class="menu active">스터디그룹
             <div class="submenu">
-                <div class="submenu-item"><a href="study_search_gpt.html">스터디 검색</a></div>
+                <div class="submenu-item selected">스터디 검색</div>
                 <div class="submenu-item">그룹 만들기</div>
                 <div class="submenu-item">스터디 관리</div>
             </div>
         </div>
-
         <div class="menu">파란학기</div>
         <div class="menu">마이페이지</div>
     </aside>
@@ -60,121 +57,24 @@
 
         <!-- 하위 주제 (컴퓨터 선택시 표시) -->
         <div class="sub-categories" id="subCategories" style="display:none;">
-            <button>C언어</button>
-            <button>파이썬</button>
-            <button>자바</button>
-            <button>인공지능</button>
-            <button>운영체제</button>
-            <button>보안</button>
-            <button>국방</button>
-            <button>네트워크</button>
+            <button data-topic="C언어">C언어</button>
+            <button data-topic="파이썬">파이썬</button>
+            <button data-topic="자바">자바</button>
+            <button data-topic="인공지능">인공지능</button>
+            <button data-topic="운영체제">운영체제</button>
+            <button data-topic="보안">보안</button>
+            <button data-topic="국방">국방</button>
+            <button data-topic="네트워크">네트워크</button>
         </div>
 
         <!-- 스터디 그룹 목록 -->
-        <div class="study-list" id="studyList" style="display:none;">
-            <div class="study-card">
-                <img src="image/cik.png" alt="C언어">
-                <div>C익웃자 | C언어 | 강술래</div>
-                <div>월 18:00 | 인원 4명</div>
-                <button>신청하기</button>
-            </div>
+        <div class="study-list" id="studyGroups" style="display:none;"></div>
 
-            <div class="study-card">
-                <img src="image/redsun.png" alt="Python">
-                <div>파이썬레드썬 | 파이썬 | 신예성</div>
-                <div>월 20:00 | 인원 6명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="image/ai.png" alt="AI">
-                <div>인공지능공부해요 | 인공지능 | 최준호호</div>
-                <div>화 18:00 | 인원 4명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="img/java.jpg" alt="Java">
-                <div>나자바바라 | 자바 | 이서준준</div>
-                <div>화 20:00 | 인원 8명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="img/security.jpg" alt="보안">
-                <div>싸봉 | 보안 | 엄홍길</div>
-                <div>월 19:00 | 인원 5명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="img/army.jpg" alt="국방">
-                <div>소머리국방방 | 국방 | 박현민</div>
-                <div>수 18:00 | 인원 4명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="image/fighter.png" alt="국방">
-                <div>돼지국방 | 국방 | 고민준</div>
-                <div>수 19:00 | 인원 4명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="image/network.png" alt="네트워크">
-                <div>네이스 | 네트워크 | 오상준</div>
-                <div>수 20:00 | 인원 5명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="image/server.png" alt="운영체제">
-                <div>통통통사후르 | 운영체제 | 설도훈</div>
-                <div>수 21:00 | 인원 4명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="image/python.png" alt="파이썬">
-                <div>애플파이 | 파이썬 | 천재윤</div>
-                <div>목 18:00 | 인원 4명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="image/os.png" alt="운영체제">
-                <div>이거진짜에요 | 운영체제 | 서민석</div>
-                <div>목 19:00 | 인원 6명</div>
-                <button>신청하기</button>
-            </div>
-
-            <div class="study-card">
-                <img src="image/drone.png" alt="국방">
-                <div>주민센터 | 국방 | 김주민</div>
-                <div>목 20:00 | 인원 8명</div>
-                <button>신청하기</button>
-            </div>
-        </div>
     </main>
 </div>
 
-<script>
-    document.getElementById("computerBtn").addEventListener("click", function() {
-        document.getElementById("subCategories").style.display = "flex";
-        document.getElementById("studyList").style.display = "flex";
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-    const menus = document.querySelectorAll(".has-submenu");
+<script src="/js/studySearch.js" defer></script>
 
-    menus.forEach(menu => {
-        menu.addEventListener("click", function() {
-            const submenu = menu.querySelector(".submenu");
-            submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
-        });
-    });
-});
-</script>
 
 </body>
 </html>
