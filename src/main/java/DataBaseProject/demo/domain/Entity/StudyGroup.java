@@ -16,7 +16,7 @@ public class StudyGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="groupId",nullable = false)
+    @Column(name="group_id",nullable = false)
     private int groupId;
 
     private String groupName;
@@ -28,7 +28,7 @@ public class StudyGroup {
     private String topic;
     private String topTopic;
 
-   @Column(name="leaderId", nullable = false)
+    @JoinColumn(name = "student_id", referencedColumnName = "leaderId")
     private String leaderId;
 
     private int maxMember;
@@ -38,4 +38,14 @@ public class StudyGroup {
     @ManyToMany(mappedBy = "studyGroup")
     private List<Student> students;
 
+    public StudyGroup(String groupName, String activityDay, String activityTime, String leaderId,String topic, String topTopic, int maxMember, LocalDate createDate){
+        this.groupName=groupName;
+        this.activityDay=activityDay;
+        this.activityTime=activityTime;
+        this.leaderId=leaderId;
+        this.topic=topic;
+        this.topTopic=topTopic;
+        this.maxMember=maxMember;
+        this.createDate=createDate;
+    }
 }

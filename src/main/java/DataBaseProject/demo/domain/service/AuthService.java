@@ -24,6 +24,7 @@ public class AuthService {
 
     public boolean login(String studentId)  {
         Student student = studentRepository.findByStudentId(studentId);
+
         if(student == null){
             return false;
         }

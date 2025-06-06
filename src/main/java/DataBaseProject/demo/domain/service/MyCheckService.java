@@ -43,7 +43,7 @@ public class MyCheckService {
 
         return mystudyGroup.stream()
                 .map(group -> new StudyGroupResponse(
-                        group.getGroupId(),
+                        studentRepository.findByStudentId(group.getLeaderId()).getName(),
                         group.getGroupName(),
                         group.getActivityDay(),
                         group.getActivityTime(),
@@ -65,7 +65,7 @@ public class MyCheckService {
                 myProject.getName(),
                 myProject.getCreateDate(),
                 myProject.getTopic(),
-                myProject.getPersonnel()
+                myProject.getPersonNum()
         );
 
     }
