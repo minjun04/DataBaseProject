@@ -27,13 +27,16 @@
     <!-- 사이드바 -->
     <aside class="sidebar">
         <div class="menu">홈</div>
-        <div class="menu active">스터디그룹
+
+        <div class="menu has-submenu">
+            스터디그룹
             <div class="submenu">
-                <div class="submenu-item selected">스터디 검색</div>
+                <div class="submenu-item"><a href="study_search_gpt.html">스터디 검색</a></div>
                 <div class="submenu-item">그룹 만들기</div>
                 <div class="submenu-item">스터디 관리</div>
             </div>
         </div>
+
         <div class="menu">파란학기</div>
         <div class="menu">마이페이지</div>
     </aside>
@@ -70,21 +73,21 @@
         <!-- 스터디 그룹 목록 -->
         <div class="study-list" id="studyList" style="display:none;">
             <div class="study-card">
-                <img src="image/blue.png" alt="C언어">
+                <img src="image/cik.png" alt="C언어">
                 <div>C익웃자 | C언어 | 강술래</div>
                 <div>월 18:00 | 인원 4명</div>
                 <button>신청하기</button>
             </div>
 
             <div class="study-card">
-                <img src="img/python.jpg" alt="Python">
+                <img src="image/redsun.png" alt="Python">
                 <div>파이썬레드썬 | 파이썬 | 신예성</div>
                 <div>월 20:00 | 인원 6명</div>
                 <button>신청하기</button>
             </div>
 
             <div class="study-card">
-                <img src="img/ai.jpg" alt="AI">
+                <img src="image/ai.png" alt="AI">
                 <div>인공지능공부해요 | 인공지능 | 최준호호</div>
                 <div>화 18:00 | 인원 4명</div>
                 <button>신청하기</button>
@@ -161,6 +164,16 @@
         document.getElementById("subCategories").style.display = "flex";
         document.getElementById("studyList").style.display = "flex";
     });
+    document.addEventListener("DOMContentLoaded", function() {
+    const menus = document.querySelectorAll(".has-submenu");
+
+    menus.forEach(menu => {
+        menu.addEventListener("click", function() {
+            const submenu = menu.querySelector(".submenu");
+            submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+        });
+    });
+});
 </script>
 
 </body>
