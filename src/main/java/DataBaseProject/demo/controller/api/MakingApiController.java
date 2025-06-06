@@ -4,10 +4,11 @@ import DataBaseProject.demo.controller.api.dto.MakeProjectRequest;
 import DataBaseProject.demo.controller.api.dto.MakeStudyRequest;
 import DataBaseProject.demo.domain.service.MakeService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @AllArgsConstructor
@@ -17,13 +18,22 @@ public class MakingApiController {
    private final MakeService makeService;
 
     @PostMapping("/study")
-    public boolean makeStudyGroup(@RequestBody MakeStudyRequest request){
-        return makeService.makeMyStudyGroup(request);
+    public ResponseEntity<?> makeStudyGroup(@RequestBody MakeStudyRequest request){
+        boolean response = makeService.makeMyStudyGroup(request);
+        Map<String, Object> result = new HashMap<>();
+        result.put("success", response);
+        return ResponseEntity.ok(result);
+
     }
 
     @PostMapping("/project")
-    public boolean makeProject(@RequestBody MakeProjectRequest request){
-        return makeService.makeMyProject(request);
+    public ResponseEntity<?> makeProject(@RequestBody MakeProjectRequest request){
+        boolean response = makeService.makeMyProject(request);
+        Map<String, Object> result = new HashMap<>();
+        result.put("success", response);
+
+        return ResponseEntity.ok(result);
+
 
     }
 
