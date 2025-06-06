@@ -45,15 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function renderStudyGroups(pageNum) {
         studyGroups.innerHTML = "";
-        let i = 0;
 
         const startIndex = (pageNum - 1) * pageSize;
         const endIndex = startIndex + pageSize;
         const currentGroups = allGroups.slice(startIndex, endIndex);
 
-        currentGroups.forEach(group => {
+        currentGroups.forEach((group,index) => {
             const card = document.createElement("div");
-            const imageUrl = `/images/${i}.png`;
+            const imageIndex = (startIndex + index) % 17;
+            const imageUrl = `/images/${imageIndex}.png`;
             card.className = "study-card";
             card.innerHTML = `
                 <img src="${imageUrl}" class="study-image">
@@ -72,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = "/studyApply";
             });
 
-            i++;
-            if (i > 11) i = i % 12;
         });
     }
 
@@ -92,14 +90,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const menus = document.querySelectorAll(".has-submenu");
+
+        const menus = document.querySelectorAll(".menu");
 
         menus.forEach(menu => {
-            menu.addEventListener("click", function() {
-                const submenu = menu.querySelector(".submenu");
-                submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
-            });
+            const submenu = menu.querySelector(".submenu");
+            if (submenu) {
+                menu.addEventListener("click", function() {
+                    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+                });
+            }
         });
-    });
+
 });

@@ -10,4 +10,9 @@ public class InitialController {
     public String index(){
         return "initial";
     }
+
+    @GetMapping("/myPage")
+    public String myPage(){
+        return "mypage";
+    }
 }
