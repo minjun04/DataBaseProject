@@ -54,6 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>요일: ${group.activityDay} 시간:${group.activityTime}</p>
                 <p>인원: ${group.maxMember}명</p>
                 <button class="apply-btn">신청하기</button>
+                 <!-- 스터디 그룹 목록 -->
+                        <div class="study-list" id="studyGroups" style="display:none;">
+                            <div class="pagination">
+                                <button>1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                                <button>5</button>
+                                <button>6</button>
+                                <button>7</button>
+                                <button>8</button>
+                                <button>9</button>
+                                <button>10</button>
+                            </div>
+                        </div>
 
             `;
 
