@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(response => response.json())
                 .then(data => {
                     renderStudyGroups(data);
+
                 })
                 .catch(error => {
                     console.error("JSON 파싱 에러:", error);
@@ -49,9 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>리더: ${group.leaderName}</p>
                 <p>요일: ${group.activityDay} 시간:${group.activityTime}</p>
                 <p>인원: ${group.maxMember}명</p>
-                <button>신청하기</button>
+                <button class="apply-btn">신청하기</button>
             `;
+
             studyGroups.appendChild(card);
+
+            // 여기서 단순히 페이지 이동만 수행
+            const applyButton = card.querySelector(".apply-btn");
+            applyButton.addEventListener("click", function () {
+                window.location.href = "/studyApply";  // 이동할 페이지 경로만 지정
+            });
         });
     }
 });
