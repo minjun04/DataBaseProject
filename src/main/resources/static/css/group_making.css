@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: 'NEXON Lv1 Gothic Light', sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 70px);
+}
+
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.menu {
+    margin-bottom: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submenu {
+    margin-left: 15px;
+}
+
+.submenu-item {
+    margin: 8px 0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #d4ebf2;
+    cursor: pointer;
+}
+
+.submenu-item.selected {
+    background-color: #aaddff;
+}
+
+/*만들기 위치 가운데*/
+
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.group-form {
+    background: #fff;
+    border-radius: 6px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-row input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+}
+
+.create-btn {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #cde0f7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    transition: background 0.3s;
+}
+
+.create-btn:hover {
+    background-color: #b3d2f0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+
+.logo {
+    font-family: 'NEXON Lv1 Gothic Light';
+    font-weight: 900;
+    font-style: italic;
+    font-size: 24px;
+    color: #368be6;
+}
+
+.search-box input {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logout-btn {
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    color: #005bac;
+    cursor: pointer;
+}
+
+.star-icon {
+    font-size: 20px;
+    color: #FFD700;
+}
+
+.logout-btn {
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    color: #005bac;
+    cursor: pointer;
+}
+
+.search-box input {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
