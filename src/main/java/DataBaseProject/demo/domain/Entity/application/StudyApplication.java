@@ -17,11 +17,13 @@ public class StudyApplication {
     @Column(name = "application_id")
     private Integer applicationId;
 
-    @Column(name="student_Id",nullable=false)
-    private String studentId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "student_id", referencedColumnName = "studentId")
+    private Student student;
 
-    @Column(name="group_Id",nullable=false)
-    private String groupId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "group_id", referencedColumnName = "groupId")
+    private StudyGroup studyGroup;
 
     @Column(name = "status")
     private String status;

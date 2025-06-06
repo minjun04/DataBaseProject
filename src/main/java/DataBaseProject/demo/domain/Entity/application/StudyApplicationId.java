@@ -1,4 +1,4 @@
-package DataBaseProject.demo.domain.Entity;
+package DataBaseProject.demo.domain.Entity.application;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
