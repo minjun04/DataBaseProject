@@ -354,7 +354,6 @@
   height: 36px;
   top: 0;
   left: 0;
-  -webkit-text-stroke: 1px #d9d9d9;
   font-family: "NEXON Lv1 Gothic-Light", Helvetica;
   font-weight: 300;
   font-size: 20px;
@@ -599,7 +598,6 @@
   height: 36px;
   top: 0;
   left: 0;
-  -webkit-text-stroke: 1px #d9d9d9;
   font-family: "NEXON Lv1 Gothic-Light", Helvetica;
   font-weight: 300;
   color: #000000;
@@ -725,3 +723,18 @@
   letter-spacing: 0;
   line-height: normal;
 }
+
+/* 1) 기본 버튼 초기화 - 디폴트 버튼 테두리·배경 제거, 포커스 아웃라인 제거 등 */
+.mypage button.text-wrapper-7,
+.mypage button.text-wrapper-9 {
+  background: none;           /* 배경 투명 */
+  border: none;               /* 기본 테두리 제거 */
+  padding: 0;                 /* 여백 없애기 (position:absolute 이므로 padding 불필요) */
+  margin: 0;
+  cursor: pointer;            /* 버튼처럼 손가락 포인터 표시 */
+  font-family: inherit;       /* 부모로부터 폰트 상속 */
+  font-size: inherit;         /* 기존 크기 유지 */
+  color: inherit;             /* 기존 컬러 유지 */
+  text-align: center;         /* 기존 텍스트 중앙 정렬 유지 */
+}
+
