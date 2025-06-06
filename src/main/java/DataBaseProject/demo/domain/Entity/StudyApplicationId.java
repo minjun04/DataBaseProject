@@ -10,8 +10,6 @@ import java.util.Objects;
 @AllArgsConstructor
 public class StudyApplicationId implements Serializable {
     private int applicationId;
-    private String studentId;
-    private int groupId;
 
     @Override
     public boolean equals(Object o) {

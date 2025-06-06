@@ -16,7 +16,6 @@ public class StudySchedule {
     @Column(name = "schedule_id")
     private int scheduleId;
 
-    @Id
     @Column(name = "leader_id", nullable = false)
     private String leaderId;
 
