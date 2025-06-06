@@ -124,8 +124,17 @@ body {
     align-items: center;
     background: #e9e9e9;
     border-radius: 10px;
-    padding: 40px;
+    padding: 50px;
     margin-bottom: 40px;
+}
+
+.banner-img {
+    width: 350px;
+    height: 350px;
+    background-color: #ccc;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
 .banner-left h1 {
@@ -168,7 +177,7 @@ body {
 
 
 .card-img {
-    width: 250px;
+    width: 330px;
     height: 250px;
     background-color: #ccc;
     border-radius: 10px;
@@ -210,7 +219,7 @@ body {
 }
 
 .new-img {
-    width: 80px;
+    width: 100px;
     height: 80px;
     background-color: #ddd;
     border-radius: 10px;
@@ -236,7 +245,7 @@ body {
 .pagination-center {
     position: absolute;
     top: 20px; /* 위치: HOT 타이틀 바로 아래 */
-    left: 56%;  /* 중앙보다 살짝 오른쪽 */
+    left: 65%;  /* 중앙보다 살짝 오른쪽 */
     transform: translateX(-50%);
     font-size: 14px;
     color: #888;
