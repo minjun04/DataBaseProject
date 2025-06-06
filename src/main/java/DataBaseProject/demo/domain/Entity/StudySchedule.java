@@ -1,13 +1,12 @@
 package DataBaseProject.demo.domain.Entity;
 
-import domain.Entity.StudyScheduleId;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Getter
 @Setter
-@IdClass(StudyScheduleId.class)
+
 @Table(name = "StudySchedule")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,7 +15,7 @@ public class StudySchedule {
     @Column(name = "schedule_id")
     private int scheduleId;
 
-    @Id
+
     @Column(name = "leader_id", nullable = false)
     private String leaderId;
 
