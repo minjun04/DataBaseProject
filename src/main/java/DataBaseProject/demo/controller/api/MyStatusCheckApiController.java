@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class MyStatusCheckApiController {
     private final MyCheckService myCheckService;
 
     @GetMapping("/info")
-    public ResponseEntity<?> myStatusCheck(String studentId){
+    public ResponseEntity<?> myStatusCheck(@RequestParam String studentId){
         StudentStatusResponse response = myCheckService.myStatus(studentId);
 
         return ResponseEntity.ok(response);
@@ -28,7 +29,7 @@ public class MyStatusCheckApiController {
     }
 
     @GetMapping("/studyInfo")
-    public ResponseEntity<?> myStudyGroupCheck(String studentId){
+    public ResponseEntity<?> myStudyGroupCheck(@RequestParam String studentId){
 
         List<StudyGroupResponse> response = myCheckService.myStudyGruop(studentId);
 

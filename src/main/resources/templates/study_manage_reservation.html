@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>강의실 예약 최종본</title>
+    <link rel="stylesheet" href="study_manage_reservation.html.css"/>
+</head>
+<body>
+
+<!-- 상단바 -->
+<header class="topbar">
+    <div class="logo">Ajoudy</div>
+    <div class="topbar-right">
+
+        <div class="search-container">
+            <div class="search-bar">검색어를 입력하세요</div>
+            <div class="star-box">★</div>
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+        </div>
+
+        <div class="logout-btn">logout</div>
+
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+        <ul class="menu">
+            <li>홈</li>
+
+            <li>
+                <div class="menu-btn active">스터디그룹</div>
+                <ul class="sub-menu">
+                    <li><div class="menu-btn sub">스터디 검색</div></li>
+                    <li><div class="menu-btn sub">그룹 만들기</div></li>
+                    <li>
+                        <div class="menu-btn sub">스터디 관리</div>
+                        <ul class="sub-sub-menu">
+                            <li><div class="menu-btn sub-sub active">강의실 예약</div></li>
+                            <li><div class="menu-btn sub-sub">스터디원 관리</div></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>파란학기</li>
+            <li>마이 페이지</li>
+        </ul>
+    </aside>
+
+    <!-- 본문 -->
+    <main class="content">
+        <h1>강의실 예약</h1>
+
+        <!-- 검색 박스 -->
+        <section class="search-box">
+            <div class="search-row">
+                <label>스터디명</label>
+                <input type="text" class="study-input">
+            </div>
+            <div class="btn-wrapper">
+                <button class="search-btn">조회</button>
+            </div>
+        </section>
+
+        <!-- 예약 테이블 박스 -->
+        <section class="table-box">
+            <div class="table-header">
+                <div>건물</div>
+                <div>호</div>
+                <div>수용인원</div>
+                <div></div>
+            </div>
+
+            <div class="table-row">
+                <div>신공학관</div>
+                <div>101호</div>
+                <div>50명</div>
+                <div><button class="reserve-btn">예약</button></div>
+            </div>
+            <div class="table-row">
+                <div>팔달관</div>
+                <div>202호</div>
+                <div>40명</div>
+                <div><button class="reserve-btn">예약</button></div>
+            </div>
+            <div class="table-row">
+                <div>원천관</div>
+                <div>303호</div>
+                <div>30명</div>
+                <div><button class="reserve-btn">예약</button></div>
+            </div>
+            <div class="table-row">
+                <div>다산관</div>
+                <div>404호</div>
+                <div>20명</div>
+                <div><button class="reserve-btn">예약</button></div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>

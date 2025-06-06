@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>파란학기 신청서</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style_study_apply.css">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="header">
+    <div class="logo">Ajoudy</div>
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="menu-icons">
+        <div class="menu-btn">&#9776;</div>
+        <div class="star-icon">★</div>
+        <div class="logout-btn">Logout</div>
+    </div>
+</header>
+
+<!-- 전체 컨테이너 -->
+<div class="container">
+
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+        <div class="menu">홈</div>
+
+        <div class="menu">
+            스터디그룹
+
+        </div>
+
+        <div class="menu has-submenu">
+            파란학기
+            <div class="submenu">
+                <div class="submenu-item"><a href="blue_search.html">파란학기 검색</a></div>
+                <div class="submenu-item">프로젝트 만들기</div>
+                <div class="submenu-item">파란학기 관리</div>
+            </div>
+        </div>
+        <div class="menu">마이페이지</div>
+    </aside>
+
+    <!-- 신청서 본문 -->
+    <main class="main-content">
+        <div class="form-container">
+            <h1>파란학기 신청서</h1>
+
+            <div class="form-box">
+                <input type="text" placeholder="제목을 입력해주세요">
+                <textarea placeholder="지원동기를 자세히 입력해주세요" rows="22"></textarea>
+
+                <button type="submit">신청하기</button>
+            </div>
+        </div>
+    </main>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const menus = document.querySelectorAll(".has-submenu");
+
+    menus.forEach(menu => {
+        menu.addEventListener("click", function() {
+            const submenu = menu.querySelector(".submenu");
+            submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+        });
+    });
+});
+</script>
+
+</body>
+</html>
