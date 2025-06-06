@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class initialController {
+public class MyPageController {
 
-    @GetMapping("/initial")
-    public String index(){
-        return "initial";
+    @GetMapping("/myPage")
+    public String myPage(){
+        return "mypage";
     }
 }
