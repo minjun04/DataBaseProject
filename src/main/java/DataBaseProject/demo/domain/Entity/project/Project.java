@@ -18,16 +18,24 @@ public class Project {
     private String name;
 
     @Id
-    @Column(name="leaderId",nullable=false)
+    @Column(name="leader_id",nullable=false)
     private String leaderId;
 
     private LocalDate createDate;
 
     private String topic;
 
-    private int personnel; //수용가능한 인원 수
+    private int personNum; //수용가능한 인원 수
 
     @OneToMany(mappedBy = "project")
     private List<Student> students;
+
+    public Project(String name, String leaderId, LocalDate createDate, String topic, int personNum){
+        this.name=name;
+        this.leaderId=leaderId;
+        this.createDate=createDate;
+        this.topic=topic;
+        this.personNum=personNum;
+    }
 
 }

@@ -1,7 +1,7 @@
 package DataBaseProject.demo.domain.repository;
 
 import DataBaseProject.demo.domain.Entity.Student;
-import DataBaseProject.demo.domain.Entity.StudyApplication;
+import DataBaseProject.demo.domain.Entity.application.StudyApplication;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
