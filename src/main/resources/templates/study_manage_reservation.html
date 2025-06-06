@@ -1,67 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>강의실 예약 최종본</title>
-    <link rel="stylesheet" href="study_manage_reservation.html.css"/>
+    <meta charset="UTF-8">
+    <title>스터디 그룹 검색</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/study_manage_reservation.css">
 </head>
 <body>
 
-<!-- 상단바 -->
-<header class="topbar">
+<!-- 헤더 -->
+<header class="header">
     <div class="logo">Ajoudy</div>
-    <div class="topbar-right">
-
-        <div class="search-container">
-            <div class="search-bar">검색어를 입력하세요</div>
-            <div class="star-box">★</div>
-            <div class="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-
-        </div>
-
-        <div class="logout-btn">logout</div>
-
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="menu-icons">
+        <div class="menu-btn">&#9776;</div>
+        <div class="star-icon">★</div>
+        <div class="logout-btn">Logout</div>
     </div>
 </header>
 
+<!-- 전체 컨테이너 -->
 <div class="container">
 
-    <!-- 왼쪽 사이드바 -->
+    <!-- 사이드바 -->
     <aside class="sidebar">
-        <ul class="menu">
-            <li>홈</li>
-
-            <li>
-                <div class="menu-btn active">스터디그룹</div>
-                <ul class="sub-menu">
-                    <li><div class="menu-btn sub">스터디 검색</div></li>
-                    <li><div class="menu-btn sub">그룹 만들기</div></li>
-                    <li>
-                        <div class="menu-btn sub">스터디 관리</div>
-                        <ul class="sub-sub-menu">
-                            <li><div class="menu-btn sub-sub active">강의실 예약</div></li>
-                            <li><div class="menu-btn sub-sub">스터디원 관리</div></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-            <li>파란학기</li>
-            <li>마이 페이지</li>
-        </ul>
+        <div class="menu">홈</div>
+        <div class="menu active">스터디그룹
+            <div class="submenu">
+                <div class="submenu-item selected">스터디 검색</div>
+                <div class="submenu-item">그룹 만들기</div>
+                <div class="submenu-item">스터디 관리</div>
+            </div>
+        </div>
+        <div class="menu">파란학기</div>
+        <div class="menu">마이페이지</div>
     </aside>
 
+
     <!-- 본문 -->
-    <main class="content">
-        <h1>강의실 예약</h1>
+    <main class="main-content">
+        <h1 class="title">강의실 예약</h1>
 
         <!-- 검색 박스 -->
-        <section class="search-box">
+        <section class="search2-box">
             <div class="search-row">
                 <label>스터디명</label>
                 <input type="text" class="study-input">
@@ -72,7 +55,7 @@
         </section>
 
         <!-- 예약 테이블 박스 -->
-        <section class="table-box">
+        <section class="table-box" id="reservation-table" style="display: none;">
             <div class="table-header">
                 <div>건물</div>
                 <div>호</div>
@@ -107,7 +90,25 @@
         </section>
     </main>
 
+ 
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBtn = document.querySelector(".search-btn");
+    const studyInput = document.querySelector(".study-input");
+    const tableBox = document.getElementById("reservation-table");
+
+    searchBtn.addEventListener("click", function () {
+        const studyName = studyInput.value.trim();
+        if (studyName !== "") {
+            tableBox.style.display = "block";
+        } else {
+            alert("스터디명을 입력해주세요.");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
