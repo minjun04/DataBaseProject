@@ -26,10 +26,24 @@
 
     <!-- 왼쪽 사이드바 -->
     <aside class="sidebar">
-        <div class="menu">홈</div>
-        <div class="menu active">스터디그룹</div>
-        <div class="menu">파란학기</div>
-        <div class="menu">마이페이지</div>
+        <div class="menu"><a href="loginAfter.html"style="color: inherit; text-decoration: none;">홈</a></div>
+        <div class="menu has-submenu">
+            스터디그룹
+            <div class="submenu">
+                <div class="submenu-item"><a href="study_search.html"style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
+                <div class="submenu-item">그룹 만들기</div>
+                <div class="submenu-item">스터디그룹 관리</div>
+            </div>
+        </div>
+        <div class="menu has-submenu">
+            파란학기
+            <div class="submenu">
+                <div class="submenu-item"><a href="blue_search.html"style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
+                <div class="submenu-item">프로젝트 만들기</div>
+                <div class="submenu-item">파란학기 관리</div>
+            </div>
+        </div>
+        <div class="menu"><a href="mypage.html " style="color: inherit; text-decoration: none;">마이페이지</a></div>
     </aside>
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
@@ -100,6 +114,6 @@
 
     </main>
 </div>
-
+<script src="/js/loginAfter.js" defer></script>
 </body>
 </html>
