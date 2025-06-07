@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스터디 그룹 검색</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/study_manage_reservation.css">
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="header">
+    <div class="logo">Ajoudy</div>
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="menu-icons">
+        <div class="menu-btn">&#9776;</div>
+        <div class="star-icon">★</div>
+        <div class="logout-btn">Logout</div>
+    </div>
+</header>
+
+<!-- 전체 컨테이너 -->
+<div class="container">
+
+    <!-- 통합된 왼쪽 사이드바 (확장자 제거 버전) -->
+    <aside class="sidebar">
+        <div class="menu"><a href="loginAfter" style="color: inherit; text-decoration: none;">홈</a></div>
+
+        <div class="menu">
+            스터디그룹
+            <div class="submenu">
+                <div class="submenu-item selected"><a href="study_search" style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
+                <div class="submenu-item"><a href="group_making" style="color: inherit; text-decoration: none;">그룹 만들기</a></div>
+
+                <!-- 스터디 관리 드롭다운 -->
+                <div class="submenu-item has-submenu">
+                    <span style="color: inherit; text-decoration: none;">스터디 관리</span>
+                    <div class="submenu2">
+                        <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">강의실 예약</a></div>
+                        <div class="submenu-item"><a href="study_member_manage" style="color: inherit; text-decoration: none;">스터디원 관리</a></div>
+                    </div>
+                </div>
+                <!-- 여기까지 -->
+            </div>
+        </div>
+
+        <div class="menu2">
+            파란학기
+            <div class="submenu">
+                <div class="submenu-item"><a href="blue_search" style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
+                <div class="submenu-item"><a href="project_making" style="color: inherit; text-decoration: none;">프로젝트 만들기</a></div>
+                <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">파란학기 관리</a></div>
+            </div>
+        </div>
+
+        <div class="menu"><a href="myPage" style="color: inherit; text-decoration: none;">마이페이지</a></div>
+    </aside>
+    <!-- 본문 -->
+    <main class="main-content">
+        <h1 class="title">스터디원 예약</h1>
+
+        <!-- 검색 박스 -->
+        <section class="search2-box">
+            <div class="search-row">
+                <label>스터디명</label>
+                <input type="text" class="study-input">
+            </div>
+            <div class="btn-wrapper">
+                <button class="search-btn">조회</button>
+            </div>
+        </section>
+
+        <!-- 예약 테이블 박스 -->
+        <section class="table-box" id="reservation-table" style="display: none;">
+            <div class="table-header">
+                <div>이름</div>
+                <div>학년</div>
+                <div>학과</div>
+                <div></div>
+            </div>
+
+            <div class="table-row">
+                <div>김민상</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
+            </div>
+            <div class="table-row">
+                <div>손정민</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
+            </div>
+            <div class="table-row">
+                <div>박현민</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
+            </div>
+            <div class="table-row">
+                <div>석원령</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
+            </div>
+        </section>
+    </main>
+
+
+</div>
+
+<script src="/js/studyroom.js" defer></script>
+<script src="/js/sideContainer.js" defer></script>
+
+</body>
+</html>
