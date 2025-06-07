@@ -31,15 +31,15 @@
         <div class="menu">
             스터디그룹
             <div class="submenu">
-                <div class="submenu-item selected"><a href="studySearch" style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
-                <div class="submenu-item"><a href="make/studyGroup" style="color: inherit; text-decoration: none;">그룹 만들기</a></div>
+                <div class="submenu-item selected"><a href="study_search" style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
+                <div class="submenu-item"><a href="group_making" style="color: inherit; text-decoration: none;">그룹 만들기</a></div>
 
                 <!-- 스터디 관리 드롭다운 -->
                 <div class="submenu-item has-submenu">
                     <span style="color: inherit; text-decoration: none;">스터디 관리</span>
                     <div class="submenu2">
-                        <div class="submenu-item"><a href="studyManage" style="color: inherit; text-decoration: none;">강의실 예약</a></div>
-                        <div class="submenu-item"><a href="studyManage" style="color: inherit; text-decoration: none;">스터디원 관리</a></div>
+                        <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">강의실 예약</a></div>
+                        <div class="submenu-item"><a href="study_member_manage" style="color: inherit; text-decoration: none;">스터디원 관리</a></div>
                     </div>
                 </div>
                 <!-- 여기까지 -->
@@ -49,8 +49,8 @@
         <div class="menu2">
             파란학기
             <div class="submenu">
-                <div class="submenu-item"><a href="projectSearch" style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
-                <div class="submenu-item"><a href="make/project" style="color: inherit; text-decoration: none;">프로젝트 만들기</a></div>
+                <div class="submenu-item"><a href="blue_search" style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
+                <div class="submenu-item"><a href="project_making" style="color: inherit; text-decoration: none;">프로젝트 만들기</a></div>
                 <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">파란학기 관리</a></div>
             </div>
         </div>
@@ -59,12 +59,12 @@
     </aside>
     <!-- 본문 -->
     <main class="main-content">
-        <h1 class="title">강의실 예약</h1>
+        <h1 class="title">조원 관리</h1>
 
         <!-- 검색 박스 -->
         <section class="search2-box">
             <div class="search-row">
-                <label>스터디명</label>
+                <label>프로젝트명</label>
                 <input type="text" class="study-input">
             </div>
             <div class="btn-wrapper">
@@ -75,35 +75,35 @@
         <!-- 예약 테이블 박스 -->
         <section class="table-box" id="reservation-table" style="display: none;">
             <div class="table-header">
-                <div>건물</div>
-                <div>호</div>
-                <div>수용인원</div>
+                <div>이름</div>
+                <div>학년</div>
+                <div>학과</div>
                 <div></div>
             </div>
 
             <div class="table-row">
-                <div>신공학관</div>
-                <div>101호</div>
-                <div>50명</div>
-                <div><button class="reserve-btn">예약</button></div>
+                <div>김민상</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
             </div>
             <div class="table-row">
-                <div>팔달관</div>
-                <div>202호</div>
-                <div>40명</div>
-                <div><button class="reserve-btn">예약</button></div>
+                <div>손정민</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
             </div>
             <div class="table-row">
-                <div>원천관</div>
-                <div>303호</div>
-                <div>30명</div>
-                <div><button class="reserve-btn">예약</button></div>
+                <div>박현민</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
             </div>
             <div class="table-row">
-                <div>다산관</div>
-                <div>404호</div>
-                <div>20명</div>
-                <div><button class="reserve-btn">예약</button></div>
+                <div>석원령</div>
+                <div>3학년</div>
+                <div>국방디지털융합학과</div>
+                <div><button class="reserve-btn">신청서 조회</button></div>
             </div>
         </section>
     </main>
