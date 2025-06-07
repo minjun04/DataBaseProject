@@ -1,58 +1,99 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    localStorage.setItem("studentId", "202300023");
     const studentId = localStorage.getItem("studentId");
-    fetch(`/mypage/${studentId}`)
-        .then(response => response.json())
+
+    // 내 정보 가져오기
+    fetch(`/api/myStatus/info?studentId=${studentId}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("프로필 응답 실패");
+            }
+            return response.json();
+        })
         .then(data => {
-            // 내 정보 렌더링
             const profileBox = document.querySelector(".profile-box");
             profileBox.innerHTML = `
-                <div>${data.student.name}</div>
-                <div>${data.student.major}</div>
-                <div>${data.student.grade}</div>
-                <div>${data.student.phone}</div>
+                <div>이름: ${data.name ?? ''}</div>
+                <div>전공: ${data.major ?? ''}</div>
+                <div>학년: ${data.grade ?? ''}</div>
+                <div>전화번호: ${data.phone ?? ''}</div>
             `;
+        })
+        .catch(error => {
+            console.error("프로필 데이터 불러오기 실패:", error);
+        });
 
-            // 스터디 그룹 테이블 렌더링
+    // 스터디 그룹 가져오기
+    fetch(`/api/myStatus/studyInfo?studentId=${studentId}`)
+        .then(response => {
+            if (response.status === 204) {
+                return [];
+            }
+            return response.json();
+        })
+        .then(studyGroups => {
+            if (!studyGroups) {
+                studyGroups = [];
+            }
+            if (!Array.isArray(studyGroups)) {
+                studyGroups = [studyGroups];
+            }
+
             const studyTbody = document.querySelectorAll(".custom-table tbody")[0];
-            studyTbody.innerHTML = ""; // 기존 데이터 제거
+            studyTbody.innerHTML = "";
 
-            data.studyGroups.forEach(group => {
+            studyGroups.forEach(group => {
+                if (!group) return; // null 방어
+
                 const row = document.createElement("tr");
                 row.innerHTML = `
-                    <td>${group.groupName}</td>
-                    <td>${group.schedule}</td>
-                    <td>${group.location}</td>
-                    <td><button class="blue-btn" onclick="viewStudyDetail('${group.groupId}')">자세히 보기</button></td>
+                    <td>${group.groupName ?? ''}</td>
+                    <td>${group.activityDay ?? ''} ${group.activityTime ?? ''}</td>
+                    <td>${group.location ?? ''}</td>
+                    <td><button class="blue-btn" onclick="viewStudyDetail('${group.groupId ?? ''}')">자세히 보기</button></td>
                 `;
                 studyTbody.appendChild(row);
             });
+        })
+        .catch(error => {
+            console.error("스터디 그룹 데이터 불러오기 실패:", error);
+        });
 
-            // 파란학기 테이블 렌더링
+    // 파란학기 프로젝트 가져오기
+    fetch(`/api/myStatus/projectInfo?studentId=${studentId}`)
+        .then(response => {
+            if (response.status === 204) {
+                return [];
+            }
+            return response.json();
+        })
+        .then(projects => {
+            if (!projects) {
+                projects = [];
+            }
+            if (!Array.isArray(projects)) {
+                throw new Error("프로젝트 응답이 배열이 아닙니다");
+            }
+
             const projectTbody = document.querySelectorAll(".custom-table tbody")[1];
             projectTbody.innerHTML = "";
 
-            data.projects.forEach(project => {
+            projects.forEach(project => {
+                if (!project) return; // null 방어
+
                 const row = document.createElement("tr");
                 row.innerHTML = `
-                    <td>${project.projectName}</td>
-                    <td>${project.major}</td>
-                    <td>${project.grade}</td>
-                    <td><button class="blue-btn" onclick="contactLeader('${project.leaderPhone}')">연락처</button></td>
+                    <td>${project.name ?? ''}</td>
+                    <td>${project.topic ?? ''}</td>
+                    <td>${project.createDate ?? ''}</td>
+                    <td><button class="blue-btn" onclick="contactLeader('${project.leaderPhone ?? ''}')">연락처</button></td>
                 `;
                 projectTbody.appendChild(row);
             });
         })
         .catch(error => {
-            console.error("데이터 불러오기 실패:", error);
+            console.error("프로젝트 데이터 불러오기 실패:", error);
         });
+
 });
-
-// 상세보기, 연락처 예시 함수 (선택)
-function viewStudyDetail(groupId) {
-    window.location.href = `/study_detail/${groupId}`;
-}
-
-function contactLeader(phone) {
-    alert(`리더 연락처: ${phone}`);
-}

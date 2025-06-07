@@ -31,16 +31,22 @@ public class MyStatusCheckApiController {
     @GetMapping("/studyInfo")
     public ResponseEntity<?> myStudyGroupCheck(@RequestParam String studentId){
 
-        List<StudyGroupResponse> response = myCheckService.myStudyGruop(studentId);
-
+        List<StudyGroupResponse> response = myCheckService.myStudyGroup(studentId);
+        System.out.println("스터디 응답: " + response);
+        if (response == null) {
+            return ResponseEntity.noContent().build(); // 204 No Content
+        }
         return ResponseEntity.ok(response);
     }
 
     @GetMapping("/projectInfo")
-    public ResponseEntity<?> myProjectCheck(String studentId, String projectName){
+    public ResponseEntity<?> myProjectCheck(@RequestParam String studentId){
 
-        ProjectResponse response = myCheckService.myProject(studentId,projectName);
-
+        ProjectResponse response = myCheckService.myProject(studentId);
+        System.out.println("프로젝트 응답: " + response);
+        if (response == null) {
+            return ResponseEntity.noContent().build(); // 204 No Content
+        }
         return ResponseEntity.ok(response);
     }
 

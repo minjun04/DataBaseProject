@@ -25,8 +25,8 @@ public class AddInfoApiController {
     }
 
     @GetMapping("/StudyGroup")
-    public ResponseEntity<?> addInfoStudyGroup(String leaderId, String name){
-        List<StudentStatusResponse> response = addInfoService.addInfoProject(leaderId,name);
+    public ResponseEntity<?> addInfoStudyGroup(String leaderId){
+        List<StudentStatusResponse> response = addInfoService.addInfoProject(leaderId);
 
         return ResponseEntity.ok(response);
     }

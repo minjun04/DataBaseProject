@@ -28,7 +28,7 @@ public class StudyGroup {
     private String topic;
     private String topTopic;
 
-    @JoinColumn(name = "student_id", referencedColumnName = "leaderId")
+    @JoinColumn(name="leader_id",referencedColumnName = "leaderId")  // <-- 여기 수정!!
     private String leaderId;
 
     private int maxMember;

@@ -36,8 +36,8 @@ public class AddInfoService {
     }
 
     //정보조회에서 프로젝트 자세히 보기 처리
-    public List<StudentStatusResponse> addInfoProject(String leaderId, String name){
-        Project project = projectRepository.findByLeaderIdAndName(leaderId,name);
+    public List<StudentStatusResponse> addInfoProject(String leaderId){
+        Project project = projectRepository.findByLeaderId(leaderId);
         List<Student> projectMember =studentRepository.findByProject(project);
         return projectMember.stream()
                 .map(member->new StudentStatusResponse(

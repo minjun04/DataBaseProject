@@ -15,11 +15,14 @@ public class StudySchedule {
     @Column(name = "schedule_id")
     private int scheduleId;
 
+    @Column(name = "location")
     private String location;
 
-    @ManyToOne
-    @JoinColumn(name = "leader_id", referencedColumnName = "student_id",
-            foreignKey = @ForeignKey(name = "fk_studyschedule_student", foreignKeyDefinition = "FOREIGN KEY (leader_id) REFERENCES student(student_id) ON DELETE CASCADE"))
-    private Student leader;
+    @JoinColumn(name="leader_id",referencedColumnName = "leaderId")  // <-- 여기 수정!!
+    private String leaderId;
+
+
+    @Column(name="group_id")
+    private int groupId;
 
 }
