@@ -19,22 +19,24 @@
         }
 
         .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-            text-align: center;
-        }
-
-        .close-btn {
-            margin-top: 15px;
-            padding: 8px 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.close-btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
@@ -84,7 +86,7 @@
 
     <!-- 본문 -->
     <main class="main-content">
-        <h1 class="title">스터디원 예약</h1>
+        <h1 class="title">스터디원 관리</h1>
 
         <!-- 검색 박스 -->
         <section class="search2-box">
@@ -93,12 +95,12 @@
                 <input type="text" class="study-input">
             </div>
             <div class="btn-wrapper">
-                <button class="search-btn">조회</button>
+                <button class="search-btn" onclick="showReservationTable()">조회</button>
             </div>
         </section>
 
         <!-- 예약 테이블 박스 -->
-        <section class="table-box" id="reservation-table" style="display: block;">
+        <section class="table-box" id="reservation-table" style="display: none;">
             <div class="table-header">
                 <div>이름</div>
                 <div>학년</div>
@@ -133,12 +135,19 @@
         </section>
     </main>
 </div>
-
 <!-- 모달 부분 -->
 <div id="applicationModal" class="modal">
     <div class="modal-content">
-        <h3 id="modalTitle"></h3>
-        <p id="modalContent"></p>
+        <h2>스터디 신청서</h2>
+        <div id="applicantInfo" style="text-align:left; margin-bottom: 20px;">
+            <p><strong>이름:</strong> <span id="infoName"></span></p>
+            <p><strong>학과:</strong> <span id="infoMajor"></span></p>
+            <p><strong>학년:</strong> <span id="infoGrade"></span></p>
+        </div>
+        <div id="applicantReason" style="text-align:left;">
+            <h3>지원 동기</h3>
+            <p id="modalContent" style="white-space: pre-wrap;"></p>
+        </div>
         <button class="close-btn" onclick="closeModal()">닫기</button>
     </div>
 </div>
