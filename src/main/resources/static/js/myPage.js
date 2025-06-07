@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${group.groupName ?? ''}</td>
                     <td>${group.activityDay ?? ''} ${group.activityTime ?? ''}</td>
                     <td>${group.location ?? ''}</td>
-                    <td><button class="blue-btn" onclick="viewStudyDetail('${group.groupId ?? ''}')">자세히 보기</button></td>
+                    <td><button class="blue-btn">자세히 보기</button></td>
                 `;
                 studyTbody.appendChild(row);
             });
