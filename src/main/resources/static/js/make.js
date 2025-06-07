@@ -36,12 +36,5 @@ document.getElementById("createBtn").addEventListener("click", function() {
         alert("생성 중 오류가 발생했습니다.");
     });
 
-            const menus = document.querySelectorAll(".menu");
 
-            menus.forEach(menu => {
-                menu.addEventListener("click", function() {
-                    const submenu = menu.querySelector(".submenu");
-                    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
-                });
-            });
 });
