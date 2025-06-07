@@ -5,15 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/make")
 public class MakingController {
 
-    @GetMapping("/project")
+    @GetMapping("/makeProject")
     public String projectMake(){
         return "project_making";
     }
 
-    @GetMapping("/studyGroup")
+    @GetMapping("/makeStudyGroup")
     public String groupMake(){
         return "group_making";
     }
