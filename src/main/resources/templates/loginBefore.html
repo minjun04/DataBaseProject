@@ -23,13 +23,40 @@
 
 <div class="container">
 
-    <!-- 왼쪽 사이드바 -->
+    <!-- 통합된 왼쪽 사이드바 (확장자 제거 버전) -->
     <aside class="sidebar">
-        <div class="menu">홈</div>
-        <div class="menu active">스터디그룹</div>
-        <div class="menu">파란학기</div>
-        <div class="menu">마이페이지</div>
+        <div class="menu"><a href="loginAfter" style="color: inherit; text-decoration: none;">홈</a></div>
+
+        <div class="menu active">
+            스터디그룹
+            <div class="submenu">
+                <div class="submenu-item selected"><a href="study_search" style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
+                <div class="submenu-item"><a href="group_making" style="color: inherit; text-decoration: none;">그룹 만들기</a></div>
+
+                <!-- 스터디 관리 드롭다운 -->
+                <div class="submenu-item has-submenu">
+                    <span style="color: inherit; text-decoration: none;">스터디 관리</span>
+                    <div class="submenu2">
+                        <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">강의실 예약</a></div>
+                        <div class="submenu-item"><a href="study_member_manage" style="color: inherit; text-decoration: none;">스터디원 관리</a></div>
+                    </div>
+                </div>
+                <!-- 여기까지 -->
+            </div>
+        </div>
+
+        <div class="menu">
+            파란학기
+            <div class="submenu">
+                <div class="submenu-item"><a href="blue_search" style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
+                <div class="submenu-item"><a href="project_making" style="color: inherit; text-decoration: none;">프로젝트 만들기</a></div>
+                <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">파란학기 관리</a></div>
+            </div>
+        </div>
+
+        <div class="menu"><a href="myPage" style="color: inherit; text-decoration: none;">마이페이지</a></div>
     </aside>
+
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
 
@@ -40,7 +67,7 @@
                 <p>아주대 내에서 스터디그룹을 만들어 그룹원을 모집하고 강의실까지 예약하세요<br>파란학기 프로젝트를 만들고 조원을 모집하세요</p>
             </div>
             <div class="banner-right">
-                <div class="banner-img"></div>
+                <div class="banner-img", style="background-image: url('/images/header.png');"></div>
             </div>
         </section>
 
@@ -79,14 +106,14 @@
                 <h2>✨NEW 스터디 / 파란학기</h2>
                 <div class="new-cards">
                     <div class="new-card">
-                        <div class="new-img new-img-1"></div>
+                        <div class="new-img new-img-1"style="background-image: url('/images/blue-software.png');"></div>
                         <div class="new-text">
                             <div class="new-title">파란학기 같이해요 (소프트웨어)</div>
                             <div class="new-desc">다음 학기에 파란학기 할 예정인데 혹시 같이하실 분 있을까요?? 소프트웨어 쪽이면 좋을 것 같아요!</div>
                         </div>
                     </div>
                     <div class="new-card">
-                        <div class="new-img new-img-2"></div>
+                        <div class="new-img new-img-2"style="background-image: url('/images/blue-eng.png');"></div>
                         <div class="new-text">
                             <div class="new-title">이걸 참아?! (공업 유기학)</div>
                             <div class="new-desc">ㅇㅌㅈ 교수님 공업 유기학 같이 스터디 하실 분?? 저 소스 공유 가능함다. 같이 스터디 해여ㅠㅠ</div>
@@ -99,6 +126,6 @@
 
     </main>
 </div>
-
+<script src="/js/sideContainer.js" defer></script>
 </body>
 </html>

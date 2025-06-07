@@ -23,28 +23,40 @@
 </header>
 
 <div class="container">
-
-    <!-- 왼쪽 사이드바 -->
+    <!-- 통합된 왼쪽 사이드바 (확장자 제거 버전) -->
     <aside class="sidebar">
-        <div class="menu"><a href="loginAfter.html"style="color: inherit; text-decoration: none;">홈</a></div>
-        <div class="menu has-submenu">
+        <div class="menu"><a href="loginAfter" style="color: inherit; text-decoration: none;">홈</a></div>
+
+        <div class="menu active">
             스터디그룹
             <div class="submenu">
-                <div class="submenu-item"><a href="study_search.html"style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
-                <div class="submenu-item">그룹 만들기</div>
-                <div class="submenu-item">스터디그룹 관리</div>
+                <div class="submenu-item selected"><a href="study_search" style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
+                <div class="submenu-item"><a href="group_making" style="color: inherit; text-decoration: none;">그룹 만들기</a></div>
+
+                <!-- 스터디 관리 드롭다운 -->
+                <div class="submenu-item has-submenu">
+                    <span style="color: inherit; text-decoration: none;">스터디 관리</span>
+                    <div class="submenu2">
+                        <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">강의실 예약</a></div>
+                        <div class="submenu-item"><a href="study_member_manage" style="color: inherit; text-decoration: none;">스터디원 관리</a></div>
+                    </div>
+                </div>
+                <!-- 여기까지 -->
             </div>
         </div>
-        <div class="menu has-submenu">
+
+        <div class="menu">
             파란학기
             <div class="submenu">
-                <div class="submenu-item"><a href="blue_search.html"style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
-                <div class="submenu-item">프로젝트 만들기</div>
-                <div class="submenu-item">파란학기 관리</div>
+                <div class="submenu-item"><a href="blue_search" style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
+                <div class="submenu-item"><a href="project_making" style="color: inherit; text-decoration: none;">프로젝트 만들기</a></div>
+                <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">파란학기 관리</a></div>
             </div>
         </div>
-        <div class="menu"><a href="mypage.html " style="color: inherit; text-decoration: none;">마이페이지</a></div>
+
+        <div class="menu"><a href="myPage" style="color: inherit; text-decoration: none;">마이페이지</a></div>
     </aside>
+
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
 
@@ -67,17 +79,17 @@
                 <h2>🔥HOT 스터디 / 파란학기</h2>
                 <div class="hot-cards">
                     <div class="card">
-                        <div class="card-img ai-img"></div>
+                        <div class="card-img" style="background-image: url('/images/2.png');"></div>
                         <div class="card-title">인공지능 공부해요 (인공지능)</div>
                         <div class="card-desc">요즘 인공지능 너무 중요한데 혼자 공부를 어떻게 해야할지 모르겠어요ㅠㅠ<br>저희 같이 공부해요~!</div>
                     </div>
                     <div class="card">
-                        <div class="card-img c-img"></div>
+                        <div class="card-img" style="background-image: url('/images/0.png');"></div>
                         <div class="card-title">C익 웃자 (C언어)</div>
                         <div class="card-desc">주변에서 다들 코딩 배우고 있어서 저도 한 번 해보려고요!<br> C언어가 나름 재미있다고 추천받았어요. 같이 공부할 분~</div>
                     </div>
                     <div class="card">
-                        <div class="card-img os-img"></div>
+                        <div class="card-img" style="background-image: url('/images/8.png');"></div>
                         <div class="card-title">퉁퉁퉁사후르 (운영체제)</div>
                         <div class="card-desc">윤영체제 배우면 다른 코딩 과목 배울때 편하다던데 같이 운영체제 공부합시다!</div>
                     </div>
@@ -94,14 +106,14 @@
                 <h2>✨NEW 스터디 / 파란학기</h2>
                 <div class="new-cards">
                     <div class="new-card">
-                        <div class="new-img new-img-1"></div>
+                        <div class="new-img new-img-1"style="background-image: url('/images/blue-software.png');"></div>
                         <div class="new-text">
                             <div class="new-title">파란학기 같이해요 (소프트웨어)</div>
                             <div class="new-desc">다음 학기에 파란학기 할 예정인데 혹시 같이하실 분 있을까요?? 소프트웨어 쪽이면 좋을 것 같아요!</div>
                         </div>
                     </div>
                     <div class="new-card">
-                        <div class="new-img new-img-2"></div>
+                        <div class="new-img new-img-2"style="background-image: url('/images/blue-eng.png');"></div>
                         <div class="new-text">
                             <div class="new-title">이걸 참아?! (공업 유기학)</div>
                             <div class="new-desc">ㅇㅌㅈ 교수님 공업 유기학 같이 스터디 하실 분?? 저 소스 공유 가능함다. 같이 스터디 해여ㅠㅠ</div>
@@ -114,6 +126,6 @@
 
     </main>
 </div>
-<script src="/js/loginAfter.js" defer></script>
+<script src="/js/sideContainer.js" defer></script>
 </body>
 </html>
