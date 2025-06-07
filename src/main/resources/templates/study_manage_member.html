@@ -37,6 +37,26 @@
     font-size: 16px;
     cursor: pointer;
 }
+.approve-btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.reject-btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
@@ -148,7 +168,11 @@
             <h3>지원 동기</h3>
             <p id="modalContent" style="white-space: pre-wrap;"></p>
         </div>
-        <button class="close-btn" onclick="closeModal()">닫기</button>
+        <div class="modal-buttons" style="margin-top: 20px; text-align: center;">
+            <button class="approve-btn" onclick="approveApplication()">승인</button>
+            <button class="reject-btn" onclick="rejectApplication()">거절</button>
+            <button class="close-btn" onclick="closeModal()">닫기</button>
+        </div>
     </div>
 </div>
 
