@@ -60,40 +60,27 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("스터디 그룹 데이터 불러오기 실패:", error);
         });
 
-    // 파란학기 프로젝트 가져오기
-    fetch(`/api/myStatus/projectInfo?studentId=${studentId}`)
-        .then(response => {
-            if (response.status === 204) {
-                return [];
-            }
-            return response.json();
-        })
-        .then(projects => {
-            if (!projects) {
-                projects = [];
-            }
-            if (!Array.isArray(projects)) {
-                throw new Error("프로젝트 응답이 배열이 아닙니다");
-            }
+    const projects = [
+           {
+               name: "Software Masters",
+               topic: "소프트웨어",
+               createDate: "2025-01-15",
+           }
+       ];
 
-            const projectTbody = document.querySelectorAll(".custom-table tbody")[1];
-            projectTbody.innerHTML = "";
+       const projectTbody = document.querySelectorAll(".custom-table tbody")[1];
+       projectTbody.innerHTML = "";
 
-            projects.forEach(project => {
-                if (!project) return; // null 방어
+       projects.forEach(project => {
+           if (!project) return;
 
-                const row = document.createElement("tr");
-                row.innerHTML = `
-                    <td>${project.name ?? ''}</td>
-                    <td>${project.topic ?? ''}</td>
-                    <td>${project.createDate ?? ''}</td>
-                    <td><button class="blue-btn" onclick="contactLeader('${project.leaderPhone ?? ''}')">연락처</button></td>
-                `;
-                projectTbody.appendChild(row);
-            });
-        })
-        .catch(error => {
-            console.error("프로젝트 데이터 불러오기 실패:", error);
-        });
-
+           const row = document.createElement("tr");
+           row.innerHTML = `
+               <td>${project.name ?? ''}</td>
+               <td>${project.topic ?? ''}</td>
+               <td>${project.createDate ?? ''}</td>
+               <td><button class="blue-btn" onclick="contactLeader('${project.leaderPhone ?? ''}')">연락처</button></td>
+           `;
+           projectTbody.appendChild(row);
+       });
 });
