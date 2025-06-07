@@ -24,19 +24,40 @@
 <!-- 전체 컨테이너 -->
 <div class="container">
 
-    <!-- 사이드바 -->
+    <!-- 통합된 왼쪽 사이드바 (확장자 제거 버전) -->
     <aside class="sidebar">
-        <div class="menu">홈</div>
-        <div class="menu active">스터디그룹
+        <div class="menu"><a href="loginAfter" style="color: inherit; text-decoration: none;">홈</a></div>
+
+        <div class="menu">
+            스터디그룹
             <div class="submenu">
-                <div class="submenu-item selected">스터디 검색</div>
-                <div class="submenu-item">그룹 만들기</div>
-                <div class="submenu-item">스터디 관리</div>
+                <div class="submenu-item selected"><a href="study_search" style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
+                <div class="submenu-item"><a href="group_making" style="color: inherit; text-decoration: none;">그룹 만들기</a></div>
+
+                <!-- 스터디 관리 드롭다운 -->
+                <div class="submenu-item has-submenu">
+                    <span style="color: inherit; text-decoration: none;">스터디 관리</span>
+                    <div class="submenu2">
+                        <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">강의실 예약</a></div>
+                        <div class="submenu-item"><a href="study_member_manage" style="color: inherit; text-decoration: none;">스터디원 관리</a></div>
+                    </div>
+                </div>
+                <!-- 여기까지 -->
             </div>
         </div>
-        <div class="menu">파란학기</div>
-        <div class="menu">마이페이지</div>
+
+        <div class="menu2">
+            파란학기
+            <div class="submenu">
+                <div class="submenu-item"><a href="blue_search" style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
+                <div class="submenu-item"><a href="project_making" style="color: inherit; text-decoration: none;">프로젝트 만들기</a></div>
+                <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">파란학기 관리</a></div>
+            </div>
+        </div>
+
+        <div class="menu"><a href="myPage" style="color: inherit; text-decoration: none;">마이페이지</a></div>
     </aside>
+
 
     <!-- 메인 내용 -->
     <main class="main-content">
@@ -75,7 +96,7 @@
 </div>
 
 <script src="/js/studySearch.js" defer></script>
-
+<script src="/js/sideContainer.js" defer></script>
 
 </body>
 </html>

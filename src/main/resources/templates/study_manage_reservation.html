@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>강의실 예약 최종본</title>
-    <link rel="stylesheet" href="/css/study_manage_reservation.html.css"/>
+    <meta charset="UTF-8">
+    <title>스터디 그룹 검색</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/study_manage_reservation.css">
 </head>
 <body>
 
-<!-- 상단바 -->
-<header class="topbar">
+<!-- 헤더 -->
+<header class="header">
     <div class="logo">Ajoudy</div>
-    <div class="topbar-right">
-
-        <div class="search-container">
-            <div class="search-bar">검색어를 입력하세요</div>
-            <div class="star-box">★</div>
-            <div class="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-
-        </div>
-
-        <div class="logout-btn">logout</div>
-
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="menu-icons">
+        <div class="menu-btn">&#9776;</div>
+        <div class="star-icon">★</div>
+        <div class="logout-btn">Logout</div>
     </div>
 </header>
 
+<!-- 전체 컨테이너 -->
 <div class="container">
 
-    <!-- 왼쪽 사이드바 -->
+    <!-- 통합된 왼쪽 사이드바 (확장자 제거 버전) -->
     <aside class="sidebar">
-        <ul class="menu">
-            <li>홈</li>
+        <div class="menu"><a href="loginAfter" style="color: inherit; text-decoration: none;">홈</a></div>
 
-            <li>
-                <div class="menu-btn active">스터디그룹</div>
-                <ul class="sub-menu">
-                    <li><div class="menu-btn sub">스터디 검색</div></li>
-                    <li><div class="menu-btn sub">그룹 만들기</div></li>
-                    <li>
-                        <div class="menu-btn sub">스터디 관리</div>
-                        <ul class="sub-sub-menu">
-                            <li><div class="menu-btn sub-sub active">강의실 예약</div></li>
-                            <li><div class="menu-btn sub-sub">스터디원 관리</div></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+        <div class="menu">
+            스터디그룹
+            <div class="submenu">
+                <div class="submenu-item selected"><a href="study_search" style="color: inherit; text-decoration: none;">스터디그룹 검색</a></div>
+                <div class="submenu-item"><a href="group_making" style="color: inherit; text-decoration: none;">그룹 만들기</a></div>
 
-            <li>파란학기</li>
-            <li>마이 페이지</li>
-        </ul>
+                <!-- 스터디 관리 드롭다운 -->
+                <div class="submenu-item has-submenu">
+                    <span style="color: inherit; text-decoration: none;">스터디 관리</span>
+                    <div class="submenu2">
+                        <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">강의실 예약</a></div>
+                        <div class="submenu-item"><a href="study_member_manage" style="color: inherit; text-decoration: none;">스터디원 관리</a></div>
+                    </div>
+                </div>
+                <!-- 여기까지 -->
+            </div>
+        </div>
+
+        <div class="menu2">
+            파란학기
+            <div class="submenu">
+                <div class="submenu-item"><a href="blue_search" style="color: inherit; text-decoration: none;">파란학기 검색</a></div>
+                <div class="submenu-item"><a href="project_making" style="color: inherit; text-decoration: none;">프로젝트 만들기</a></div>
+                <div class="submenu-item"><a href="study_manage_reservation" style="color: inherit; text-decoration: none;">파란학기 관리</a></div>
+            </div>
+        </div>
+
+        <div class="menu"><a href="myPage" style="color: inherit; text-decoration: none;">마이페이지</a></div>
     </aside>
-
     <!-- 본문 -->
-    <main class="content">
-        <h1>강의실 예약</h1>
+    <main class="main-content">
+        <h1 class="title">강의실 예약</h1>
 
         <!-- 검색 박스 -->
-        <section class="search-box">
+        <section class="search2-box">
             <div class="search-row">
                 <label>스터디명</label>
                 <input type="text" class="study-input">
@@ -72,7 +73,7 @@
         </section>
 
         <!-- 예약 테이블 박스 -->
-        <section class="table-box">
+        <section class="table-box" id="reservation-table" style="display: none;">
             <div class="table-header">
                 <div>건물</div>
                 <div>호</div>
@@ -107,7 +108,11 @@
         </section>
     </main>
 
+
 </div>
+
+<script src="/js/studyroom.js" defer></script>
+<script src="/js/sideContainer.js" defer></script>
 
 </body>
 </html>

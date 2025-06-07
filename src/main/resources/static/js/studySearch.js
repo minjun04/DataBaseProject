@@ -90,16 +90,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-
-        const menus = document.querySelectorAll(".menu");
-
-        menus.forEach(menu => {
-            const submenu = menu.querySelector(".submenu");
-            if (submenu) {
-                menu.addEventListener("click", function() {
-                    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
-                });
-            }
-        });
-
 });

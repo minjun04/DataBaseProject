@@ -35,4 +35,6 @@ document.getElementById("createBtn").addEventListener("click", function() {
         console.error("에러 발생:", error);
         alert("생성 중 오류가 발생했습니다.");
     });
+
+
 });

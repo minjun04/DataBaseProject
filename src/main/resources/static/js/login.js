@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data => {
       console.log("서버 응답 받음:", data);
       if (data.success) {
+        localStorage.setItem("studentId", data.studentId);
         window.location.href = "/loginAfter";
       } else {
         alert("로그인 실패");
