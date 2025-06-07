@@ -283,7 +283,3 @@ body {
   background-color: #d4ebf2;
   cursor: pointer;
 }
-
-.submenu-item.selected {
-  background-color: #aaddff;
-}

@@ -39,10 +39,6 @@ body {
     cursor: pointer;
 }
 
-.submenu-item.selected {
-    background-color: #aaddff;
-}
-
 .main-content {
     flex-grow: 1;
     padding: 40px;

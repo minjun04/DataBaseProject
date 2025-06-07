@@ -40,10 +40,6 @@ body {
     cursor: pointer;
 }
 
-.submenu-item.selected {
-    background-color: #aaddff;
-}
-
 /*만들기 위치 가운데*/
 
 .main-content {
