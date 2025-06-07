@@ -11,4 +11,8 @@ public class StudySearchController {
 
         return "study_search";
     }
+    @GetMapping("/projectSearch")
+    public String projectSearch(){
+        return "blue-search";
+    }
 }
