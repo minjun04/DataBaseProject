@@ -13,6 +13,6 @@ public class StudySearchController {
     }
     @GetMapping("/projectSearch")
     public String projectSearch(){
-        return "blue-search";
+        return "blue_search";
     }
 }
